@@ -1,15 +1,14 @@
 .categorias-card-inicio {
-    border: #EBEBEF 1px solid;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     border-radius: 8px;
     padding: 16px;
     margin: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
+    border: 0;
 }
 
 .categorias-card-inicio:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: #313142;
 }
 
 .categorias-card-inicio img {

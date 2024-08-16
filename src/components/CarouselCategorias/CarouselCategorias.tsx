@@ -13,7 +13,6 @@ const CarouselCategorias = ({ marcas, handleSelectedMarca }: props) => {
 
     return (
         <div className="categorias-div-inicio">
-            <h1>Marcas</h1>
             <div className="div-cards-categorias-carousel-inicio row">
                 {
                     marcas.map((i, index) =>

@@ -1,9 +1,5 @@
 import './Inicio.css'
 import {Link, useNavigate} from "react-router-dom";
-import InformationCard from "../../components/InformationCard/InformationCard.tsx";
-import iconInformation1 from "../../images/icon.png"
-import iconInformation2 from "../../images/icon(1).png"
-import iconInformation3 from "../../images/icon(2).png"
 import imageAvaliacoesInicio from "../../images/amico.png"
 import imgPerfil from "../../images/img.png"
 import AvaliacaoCard from "../../components/AvaliacaoCard/AvaliacaoCard.tsx";
@@ -18,6 +14,7 @@ import useFiltersVehicles from "../../hooks/useFiltersVehicles.tsx";
 import CarouselCategorias from "../../components/CarouselCategorias/CarouselCategorias.tsx";
 import CardVeiculoEstoque from "../../components/CardVeiculoEstoque/CardVeiculoEstoque.tsx";
 import CarouselBanner from "../../components/CarouselBanner/CarouselBanner.tsx";
+import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 
 const Inicio = () => {
 
@@ -33,6 +30,7 @@ const Inicio = () => {
 
     return (
         <div className="inicio">
+            <ButtonSuspense />
             <CarouselBanner />
             {/*<div className="banner-div-inicio">*/}
             {/*    <div className="text-banner-div-inicio">*/}
@@ -54,11 +52,11 @@ const Inicio = () => {
             {/*    </div>*/}
             {/*    <img src={imageBannerinicio} alt="" />*/}
             {/*</div>*/}
-            <div className="informations-div-inicio row">
-                <InformationCard title="Carros novos e semi-novos" description="Nós proporcionamos para você condições especiais para poder adquirir o veículo dos seus sonhos! " image={iconInformation1}/>
-                <InformationCard title="Compra de veículos" description="Compramos seu veículo sem burocracia, com agilidade na análise e preço justo." image={iconInformation2}/>
-                <InformationCard title="Financie o seu sonho" description="Temos como parceiras as principais financeiras, isso garante melhores taxas para você!" image={iconInformation3}/>
-            </div>
+            {/*<div className="informations-div-inicio">*/}
+            {/*    <InformationCard title="Carros novos e semi-novos" description="Nós proporcionamos para você condições especiais para poder adquirir o veículo dos seus sonhos! " image={iconInformation1}/>*/}
+            {/*    <InformationCard title="Compra de veículos" description="Compramos seu veículo sem burocracia, com agilidade na análise e preço justo." image={iconInformation2}/>*/}
+            {/*    <InformationCard title="Financie o seu sonho" description="Temos como parceiras as principais financeiras, isso garante melhores taxas para você!" image={iconInformation3}/>*/}
+            {/*</div>*/}
 
             <div className="div-carousel-categorias">
                 <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectedMarca}/>
@@ -67,12 +65,12 @@ const Inicio = () => {
             <div className="veiculos-destaque-div-inicio" id="veiculos-destaque">
                 <h1>Veículos em destaque</h1>
                 <div className="veiculos-destaque-cards-div-inicio row">
-                    {data?.slice(0, 8).map((i: Vehicle, index) =>
+                    {data?.slice(0, 4).map((i: Vehicle, index) =>
                         <CardVeiculoEstoque veiculo={i} key={"carro" + index}/>
                     )}
                 </div>
-                <div className="col-12 d-flex justify-content-center">
-                    <Link to="/veiculos/#veiculos" className="button-veiculos-destaque-inicio">Ver mais</Link>
+                <div className="col-12 d-flex justify-content-start">
+                    <Link to="/veiculos/#veiculos" className="button-veiculos-destaque-inicio">Ver estoque</Link>
                 </div>
             </div>
             <div className="avaliacoes-div-inicio">
@@ -97,29 +95,29 @@ const Inicio = () => {
                 <div className="mapa-div-localizacao-inicio">
                     <h1>Onde estamos?</h1>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.2884943778478!2d-49.2659074530998!3d-25.43762396255302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce468ed54b4bf%3A0x4f96264373029feb!2zU2hvcHBpbmcgRXN0YcOnw6Nv!5e0!3m2!1spt-BR!2sbr!4v1723774333079!5m2!1spt-BR!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5206.475782558568!2d-46.78631856658611!3d-23.533159307665038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff087931c5f9%3A0xaea1621f466d8755!2sAv.%20dos%20Autonomistas%2C%203423%20-%20Vila%20Yara%2C%20Osasco%20-%20SP%2C%2006090-023!5e0!3m2!1spt-BR!2sbr!4v1723821166448!5m2!1spt-BR!2sbr"
                         width="600" height="450" loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                         className="map-localizacao-inicio"
                     />
                 </div>
                 <div className="informacoes-localizacao-div-inicio">
-                    <h1>Nome da loja</h1>
+                    <h1>Car Center Osasco Eireli</h1>
                     <div className="informacao-localizacao-card-inicio">
                         <GrLocation className="icon-informacao-localizacao-card-inicio"/>
-                        <h2>Rua lorem ipsum, 1234 - Nome do bairro, Nome da cidade/UF - CEP 12345-000</h2>
+                        <h2>Avenida dos Autonomistas, 3423 - Centro - Osasco/SP - CEP 06090023 </h2>
                     </div>
                     <div className="informacao-localizacao-card-inicio">
                         <FaWhatsapp className="icon-informacao-localizacao-card-inicio"/>
-                        <h2>+55 (11) 9 1234-5678</h2>
+                        <h2>(11) 93452-4004</h2>
                     </div>
                     <div className="informacao-localizacao-card-inicio">
                         <RiPhoneLine className="icon-informacao-localizacao-card-inicio"/>
-                        <h2>+55 (11) 9 1234-5678</h2>
+                        <h2>(11) 3682-4544</h2>
                     </div>
                     <div className="informacao-localizacao-card-inicio">
                         <MdOutlineEmail className="icon-informacao-localizacao-card-inicio"/>
-                        <h2>exemplo@mail.com</h2>
+                        <h2>carcentermultimarcasvendas@gmail.com</h2>
                     </div>
                 </div>
             </div>

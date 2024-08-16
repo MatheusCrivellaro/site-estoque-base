@@ -1,20 +1,51 @@
 nav {
-    padding: 12px 24px;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    border: 1px solid #EBEBEF;
+    background: #212121;
+    z-index: 99;
+}
+
+.nav-container {
+    position: relative;
+}
+
+.div-horarios-nav {
+    height: 100%;
+    background: #424242;
+    color: #979797;
+    padding: 6px 24px;
+    display: flex;
+    justify-content: end;
+    font-size: 16px;
+}
+
+.div-horarios-nav span {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.suspense-nav {
+    position: fixed;
+    top:0
 }
 
 .title-div-nav {
     display: flex;
     align-items: center;
+    padding: 6px 24px;
+    height: 100%;
+}
+
+.title-div-nav img {
+    height: max-content;
 }
 
 .optionals-div-nav {
     display: flex;
     align-items: center;
     justify-content: end;
+    padding: 0 24px;
 }
 
 .title {
@@ -37,14 +68,14 @@ nav {
 }
 
 .active-button-nav {
-    border: 1px solid #DBF3FF;
-    background-color: #F0FAFF;
-    color: #00ACFF;
+    border: #EBCA6A 1px solid;
+    background-color: #212121;
+    color: #dfab21;
 }
 
 .deactivated-button-nav {
     background-color: rgba(0,0,0,0);
-    color: #3F3F50;
+    color: #9B9B9B;
     border: 1px solid rgba(0,0,0,0);
 }
 
@@ -52,7 +83,7 @@ nav {
     border-radius: 4px;
     padding: 4px 12px;
     margin: 0 0 0 24px;
-    font-size: 13px;
+    font-size: 16px;
     text-decoration: none;
 
 }

@@ -5,10 +5,13 @@ const CarouselBanner = () => {
         <div id="carouselExample" className="carousel slide carousel-banner">
             <div className="carousel-inner carousel-div-banner">
                 <div className="carousel-item active div-banners-carousel">
-                    <img src="https://resized-images.autoconf.com.br/1920x450/filters:format(webp)/site/64/7fe01d06-dd18-463e-be8e-371369438f38.png" alt=""/>
+                    <img src="https://resized-images.autoconf.com.br/1440x338/filters:format(webp)/site/912/72a94062-ce7f-4d25-8dbf-a81ea86733bf.jpeg" alt=""/>
                 </div>
                 <div className="carousel-item div-banners-carousel">
-                    <img src="https://resized-images.autoconf.com.br/1920x450/filters:format(webp)/site/64/a22ca6d1-cc43-4afb-9662-bd71bc9ed10f.png" alt=""/>
+                    <img src="https://resized-images.autoconf.com.br/1440x338/filters:format(webp)/site/912/5d449fb9-40e3-4dff-949f-2ea47ef1a867.png" alt=""/>
+                </div>
+                <div className="carousel-item div-banners-carousel">
+                    <img src="https://resized-images.autoconf.com.br/1440x338/filters:format(webp)/site/912/be907c1b-c8d0-4d69-811a-cbf5fe8424b6.jpeg" alt=""/>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

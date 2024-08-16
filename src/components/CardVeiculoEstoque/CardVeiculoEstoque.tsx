@@ -21,7 +21,7 @@ const CardVeiculoEstoque = ({ veiculo }:props) => {
                 <div>
                     <CarouselCards veiculo={veiculo} />
                 </div>
-                <div>
+                <div className="div-informations-card-estoque">
                     <h4><img src={getLogo(veiculo.marca)} alt="" className="img-logo-card-veiculo"/> <span>{veiculo.marca + " "}</span>{veiculo.modelo}</h4>
                     <h2>{veiculo.versao}</h2>
                     <div className="ano-km-div-card-veiculo-estoque">

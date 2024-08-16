@@ -8,7 +8,7 @@ type props = {
 
 const InformationCard = ({ title, description, image }: props) => {
     return (
-        <div className="col-4">
+        <div className="col">
             <div className="informations-card-inicio">
                 <img src={image} alt=""/>
                 <h1>{title}</h1>

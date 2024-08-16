@@ -4,7 +4,7 @@
 
 .div-options-filtro-veiculos h1 {
     font-size: 14px;
-    color: #121217;
+    color: #FAFAFA;
     margin-bottom: 16px;
 }
 
@@ -28,7 +28,7 @@
 
 .div-options-filtro-veiculos h1 {
     font-size: 14px;
-    color: #121217;
+    color: #FAFAFA;
     margin-bottom: 16px;
 }
 
@@ -39,6 +39,7 @@
 .div-options-filtro-veiculos label {
     font-size: 14px;
     margin-right: 24px;
+    color: #FAFAFA;
 }
 
 .div-options-radios-veiculos {
