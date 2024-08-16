@@ -1,0 +1,78 @@
+nav {
+    padding: 12px 24px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #EBEBEF;
+}
+
+.title-div-nav {
+    display: flex;
+    align-items: center;
+}
+
+.optionals-div-nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 48px 0 0;
+}
+
+.search-nav {
+    border-radius: 8px;
+    border: solid #D1D1DB 1px;
+    background-color: #FAFAFA;
+    width: 320px;
+    padding: 8px;
+}
+
+.search-nav::placeholder {
+    font-size: 14px;
+    color: #6C6C89;
+}
+
+.active-button-nav {
+    border: 1px solid #DBF3FF;
+    background-color: #F0FAFF;
+    color: #00ACFF;
+}
+
+.deactivated-button-nav {
+    background-color: rgba(0,0,0,0);
+    color: #3F3F50;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.button-nav {
+    border-radius: 4px;
+    padding: 4px 12px;
+    margin: 0 0 0 24px;
+    font-size: 13px;
+    text-decoration: none;
+
+}
+
+.whatsapp-button-nav {
+    border: 0;
+    background-color: #26A95F;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin: 4px 8px 4px 24px;
+}
+
+.text-whatsapp-button-nav {
+    color: #FAFAFA;
+    font-size: 14px;
+    margin: 0;
+}
+
+.icon-wpp-nav {
+    color: #FAFAFA;
+    margin: 0 4px;
+}
