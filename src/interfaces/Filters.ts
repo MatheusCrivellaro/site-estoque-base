@@ -6,4 +6,5 @@ export interface Filters {
     cambio?: string[];
     carroceria?: string[];
     combustivel?: string[];
+    ordenacao?: string
 }

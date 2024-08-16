@@ -11,6 +11,27 @@ const useFilteredVehicles = (vehicles: Vehicle[] = [], initialFilters: Filters =
     return parseFloat(cleanedStr);
   }
 
+  const ordenaLista = (ordenacao: string | undefined, data: Vehicle[]) => {
+    console.log("entrou")
+    if (ordenacao) {
+      if (ordenacao === "relevancia")
+        return data
+      if (ordenacao==="menor-preco")
+        return data.sort((a, b) => {
+          return convertToNumber(a.precoVenda) - convertToNumber(b.precoVenda)
+        })
+      if (ordenacao==="maior-preco")
+        return data.sort((a, b) => convertToNumber(b.precoVenda) - convertToNumber(a.precoVenda))
+      if (ordenacao==="ano-mais-novo")
+        return data.sort((a, b) => convertToNumber(a.anoModelo) - convertToNumber(b.anoModelo))
+      if (ordenacao==="menor-km")
+        return data.sort((a, b) => convertToNumber(a.km) - convertToNumber(b.km))
+      if (ordenacao==="marca-modelo")
+        return data.sort((a, b) => convertToNumber(a.precoVenda) - convertToNumber(b.precoVenda))
+    }
+    return data
+  }
+
   useEffect(() => {
     let result = vehicles;
     let updateAllowed = false
@@ -57,6 +78,8 @@ const useFilteredVehicles = (vehicles: Vehicle[] = [], initialFilters: Filters =
       updateAllowed = true
       result = result.filter(vehicle => convertToNumber(vehicle.precoVenda) > filters.precoMin!)
     }
+
+    result = ordenaLista(filters.ordenacao, result)
 
     if (updateAllowed){
       setFilteredVehicles(result)

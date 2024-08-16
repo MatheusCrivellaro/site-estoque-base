@@ -26,8 +26,19 @@ const Veiculos = () => {
     const [selectedCarroceria, setSelectedCarroceria] = useState<string[]>([]);
     const [precoMin, setPrecoMin] = useState<number>();
     const [precoMax, setPrecoMax] = useState<number>();
+    const [ordenacao, setOrdenacao] = useState<string>("relevancia")
 
     const { filteredVehicles, setFilters } = useFiltersVehicles(data);
+
+    const [openFilter, setOpenFilter] = useState<boolean>(false)
+
+    const handleOrdenacao = (value: string) => {
+        setOrdenacao(value)
+    }
+
+    const handleOpenFilter = () => {
+        setOpenFilter(!openFilter)
+    }
 
     function extractNumbers(input: string): number {
         return parseInt(input.replace(/\D/g, ''), 10)
@@ -82,6 +93,7 @@ const Veiculos = () => {
         setSelectedCambios(["todos"]);
         setSelectedCarroceria(["todos"]);
         setSelectedCombustivel(["todos"]);
+        setOrdenacao("relevancia")
     }
 
     useEffect(() => {
@@ -96,23 +108,20 @@ const Veiculos = () => {
             cambio: selectedCambios,
             carroceria: selectedCarroceria,
             combustivel: selectedCombustivel,
+            ordenacao: ordenacao
         }));
-    }, [precoMin, precoMax, selectedColors, selectedMarcas, setFilters, selectedCarroceria, selectedCambios, selectedCombustivel]);
+    }, [ordenacao, precoMin, precoMax, selectedColors, selectedMarcas, setFilters, selectedCarroceria, selectedCambios, selectedCombustivel]);
 
     return (
         <div>
             <ButtonSuspense/>
             <div className="veiculos row" id="veiculos">
-                <div className="filtro-div-veiculos col-3">
+                <div className="filtro-div-veiculos col-3 collapse collapse-horizontal" id="filters-collapse">
                     <div className="menu-filtros-div-veiculos">
                         <h1 className="col-12">Filtrar</h1>
                         <div className="d-flex col-12">
                             <div className="col-6 div-clear-filtro-button">
                                 <button className="clear-filtro-button" onClick={handleClearFilters}>Limpar Filtros
-                                </button>
-                            </div>
-                            <div className="col-6 div-filtro-button">
-                                <button className="filtro-button">Filtrar <LuFilter className="icon-button-filtro"/>
                                 </button>
                             </div>
                         </div>
@@ -142,20 +151,70 @@ const Veiculos = () => {
                     <OptionFiltroContainer title="Carroceria" group={"carroceria"} value={carrocerias}
                                            handle={handleCarroceriaChange} selected={selectedCarroceria} todos={true}/>
                 </div>
-                <div className="cards-div-veiculos col-9">
+                <div className={`cards-div-veiculos ${openFilter ? "col-9" : "col-12"}`}>
                     <div className="marcas-cards-div-veiculos">
                         <CarouselCategorias marcas={marcas} handleSelectedMarca={handleSelectMarca}/>
                     </div>
                     {filteredVehicles.length === 0 ?
                         <div className="cards-itens-div-none-veiculos">
-                            <h1 className="col-12">Veículos em destaque</h1>
-                            <h2>Nenhum veículo foi encontrado :(</h2>
+                            <div className="div-pre-content-estoque">
+                                <div>
+                                    <h1 className="col-12">Veículos em destaque</h1>
+                                    <h2>Nenhum veiculo encontrado</h2>
+                                </div>
+                                <div className="div-filtro-button">
+                                    <button className="filtro-button" onClick={handleOpenFilter}
+                                            data-bs-toggle="collapse" data-bs-target="#filters-collapse"
+                                            aria-expanded="false" aria-controls="filters-collapse">
+                                        Filtrar <LuFilter className="icon-button-filtro"/>
+                                    </button>
+                                </div>
+                            </div>
                         </div> :
                         <div className="cards-itens-div-veiculos row">
-                            <h1 className="col-12">Veículos em destaque</h1>
-                            {filteredVehicles.length === 0 ? <h2>Nada encontrado</h2> : filteredVehicles?.map(value =>
-                                <CardVeiculoEstoque veiculo={value} key={value.codigo}/>
-                            )}
+                            <div className="div-pre-content-estoque">
+                                <div>
+                                    <h1 className="col-12">Veículos em destaque</h1>
+                                    <h3><span>{data?.length}</span> veículos encontrados</h3>
+                                </div>
+                                <div className="div-filtro-button">
+                                    <button className="filtro-button" onClick={handleOpenFilter}
+                                            data-bs-toggle="collapse" data-bs-target="#filters-collapse"
+                                            aria-expanded="false" aria-controls="filters-collapse">
+                                        Filtrar <LuFilter className="icon-button-filtro"/>
+                                    </button>
+                                    <div className="dropdown">
+                                        <button className="dropdown-toggle ordenar-por-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Ordenar Por
+                                        </button>
+                                        <ul className="dropdown-menu dropdown-menu-div">
+                                            <li>
+                                                <button className="dropdown-ordenar-por-li" onClick={() => handleOrdenacao("relevancia")}>Relevancia</button>
+                                            </li>
+                                            <li>
+                                                <button className="dropdown-ordenar-por-li" onClick={() => handleOrdenacao("marca-modelo")}>Marca/Modelo</button>
+                                            </li>
+                                            <li>
+                                                <button className="dropdown-ordenar-por-li" onClick={() => handleOrdenacao("menor-preco")}>Menor Preço</button>
+                                            </li>
+                                            <li>
+                                                <button className="dropdown-ordenar-por-li" onClick={() => handleOrdenacao("maior-preco")}>Maior Preço</button>
+                                            </li>
+                                            <li>
+                                                <button className="dropdown-ordenar-por-li" onClick={() => handleOrdenacao("ano-mais-novo")}>Ano mais novo</button>
+                                            </li>
+                                            <li>
+                                                <button className="dropdown-ordenar-por-li" onClick={() => handleOrdenacao("menor-km")}>Menor KM</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                {filteredVehicles.length === 0 ? <h2>Nada encontrado</h2> : filteredVehicles?.map(value =>
+                                    <CardVeiculoEstoque veiculo={value} key={value.codigo}/>
+                                )}
+                            </div>
                         </div>
                     }
                 </div>

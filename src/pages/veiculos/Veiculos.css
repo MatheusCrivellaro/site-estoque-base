@@ -4,10 +4,10 @@
 
 .filtro-div-veiculos {
     min-height: 100vh;
-    height: min-content;
+    height: auto;
     background: #121217;
     padding: 24px;
-    border-right: #EBEBEF 1px solid;
+    border-right: #282833 1px solid;
 }
 
 .cards-div-veiculos {
@@ -27,23 +27,23 @@
 }
 
 .clear-filtro-button {
-    background-color: #FAFAFA;
-    border: #D1D1DB solid 1px;
+    background-color: #282833;
+    border: none;
     padding: 4px;
     border-radius: 8px;
     font-size: 14px;
     width: 100%;
+    color: #fafafa;
 }
 
 .filtro-button {
     background-color: #00ACFF;
     color: #FAFAFA;
     border: none;
-    padding: 4px;
+    padding: 8px 24px;
     border-radius: 8px;
-    font-size: 14px;
-    width: 100%;
-    height: 100%;
+    font-size: 16px;
+    height: min-content;
 }
 
 .icon-button-filtro {
@@ -56,6 +56,31 @@
 
 .div-filtro-button {
     padding-left: 8px;
+    display: flex;
+}
+
+.ordenar-por-button {
+    padding: 8px 24px;
+    border: none;
+    background-color: #00ACFF;
+    color: #fafafa;
+    border-radius: 8px;
+    margin-left: 12px;
+}
+
+.dropdown-ordenar-por-li {
+    padding: 4px;
+    width: 100%;
+    border: none;
+    background-color: #fafafa;
+}
+
+.dropdown-ordenar-por-li:hover {
+    background-color: #e8e8e8;
+}
+
+.dropdown-menu-div {
+    background-color: #fafafa;
 }
 
 .menu-preco-filtros-div-veiculos h1 {
@@ -88,7 +113,7 @@
 }
 
 .menu-preco-filtros-div-veiculos input::placeholder {
-    color: #6C6C89;
+    color: #b1b1b1;
     font-size: 14px;
 }
 
@@ -118,13 +143,27 @@
 .cards-itens-div-veiculos {
     padding: 24px;
     width: 100%;
+    justify-content: center;
+}
+
+.div-pre-content-estoque {
+    display: flex;
+    justify-content: space-between;
 }
 
 .cards-itens-div-veiculos h1 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 24px;
     color: #FAFAFA;
+}
+
+.cards-itens-div-veiculos h3 {
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.cards-itens-div-veiculos span {
+    font-weight: 600;
 }
 
 .cards-itens-div-none-veiculos h1 {
