@@ -119,9 +119,9 @@
 }
 
 .avaliacoes-div-inicio {
-    padding: 24px 48px;
+    padding: 48px;
     display: flex;
-    background: #121217;
+    background: #EBCA6A;
 }
 
 @media (min-width: 1600px) {
@@ -131,11 +131,12 @@
 }
 
 .avaliacoes-cards-div-inicio {
-    margin-right: 48px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .avaliacoes-cards-div-inicio h1 {
-    color: #fafafa;
+    color: #121217;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 24px;

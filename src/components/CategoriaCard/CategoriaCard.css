@@ -3,12 +3,12 @@
     border-radius: 8px;
     padding: 16px;
     margin: 8px;
-    transition: 0.3s;
+    transition: 0.2s;
     border: 0;
 }
 
 .categorias-card-inicio:hover {
-    background-color: #313142;
+    box-shadow: rgba(255, 255, 255, 0.8) 0 0 10px;
 }
 
 .categorias-card-inicio img {

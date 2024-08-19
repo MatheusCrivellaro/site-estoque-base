@@ -1,8 +1,9 @@
 
 .avaliacoes-card-inicio {
-    padding: 16px 8px;
+    padding: 32px;
     margin-bottom: 16px;
-    border-bottom: #D1D1DB solid 1px;
+    background-color: #121217;
+    height: 100%;
 }
 
 .title-card-avaliacoes-inicio {
@@ -19,8 +20,14 @@
     margin: 0 8px;
 }
 
+.title-card-avaliacoes-inicio img {
+    border-radius: 360px;
+    width: 48px;
+}
+
 .avaliacoes-card-inicio h2 {
     color: #fafafa;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
+    line-height: 125%;
 }
