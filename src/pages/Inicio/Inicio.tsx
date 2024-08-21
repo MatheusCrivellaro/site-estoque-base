@@ -8,17 +8,23 @@ import CarouselCategorias from "../../components/CarouselCategorias/CarouselCate
 import CardVeiculoEstoque from "../../components/CardVeiculoEstoque/CardVeiculoEstoque.tsx";
 import CarouselBanner from "../../components/CarouselBanner/CarouselBanner.tsx";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
+import {useEffect, useState} from "react";
 
 const Inicio = () => {
 
     const { data } = useGetStock();
     const { marcas  } = useCollects(data)
+    const [destaques, setDestaques] = useState<Vehicle[]>()
 
     const navigate = useNavigate();
 
     const handleSelectedMarca = (selectedMarca: string) => {
         navigate('/veiculos', { state: { marcaSelecionada: selectedMarca } });
     };
+
+    useEffect(() => {
+        setDestaques(data?.slice(0, 8))
+    }, [data]);
 
     return (
         <div className="inicio">
@@ -32,7 +38,7 @@ const Inicio = () => {
             <div className="veiculos-destaque-div-inicio" id="veiculos-destaque">
                 <h1>Veículos em destaque</h1>
                 <div className="veiculos-destaque-cards-div-inicio row">
-                    {data?.slice(0, 4).map((i: Vehicle, index) =>
+                    {destaques?.map((i: Vehicle, index) =>
                         <CardVeiculoEstoque veiculo={i} key={"carro" + index}/>
                     )}
                 </div>
