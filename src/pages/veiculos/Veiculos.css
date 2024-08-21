@@ -29,21 +29,44 @@
 .clear-filtro-button {
     background-color: #282833;
     border: none;
-    padding: 4px;
+    font-weight: 700;
+    padding: 4px 24px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
     color: #fafafa;
 }
 
 .filtro-button {
-    background-color: #00ACFF;
+    background-color: #dfab21;
     color: #FAFAFA;
+    font-weight: 700;
     border: none;
-    padding: 8px 24px;
+    padding: 4px 24px;
     border-radius: 8px;
     font-size: 16px;
     height: min-content;
+    width: 100%;
+}
+
+.button-ordenar {
+    border: 0;
+    border-radius: 8px;
+    padding: 4px 24px;
+    color: #FAFAFA;
+    font-weight: 700;
+    background-color: #282833;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.button-ordenar-menu {
+    width: 100%;
+    background: #282833;
+}
+
+.button-ordenar-menu a {
+    color: #FAFAFA;
 }
 
 .icon-button-filtro {
@@ -141,9 +164,19 @@
 }
 
 .cards-itens-div-veiculos {
-    padding: 24px;
     width: 100%;
-    justify-content: center;
+    padding: 0 24px;
+}
+
+.div-container-carousel-categorias {
+    padding-bottom: 48px;
+}
+
+.div-container-carousel-categorias-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #FAFAFA;
 }
 
 .div-pre-content-estoque {
@@ -151,9 +184,10 @@
     justify-content: space-between;
 }
 
-.cards-itens-div-veiculos h1 {
-    font-size: 24px;
-    font-weight: bold;
+.cards-itens-div-veiculos-title {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 16px;
     color: #FAFAFA;
 }
 
@@ -183,4 +217,8 @@
 .cards-itens-div-none-veiculos {
     padding: 24px;
     width: 100%;
+}
+
+.div-estoque-cards {
+    display: flex;
 }

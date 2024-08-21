@@ -1,10 +1,10 @@
 export interface Filters {
-    marcas?: string[];
-    cores?: string[];
-    precoMax?: number;
-    precoMin?: number;
-    cambio?: string[];
-    carroceria?: string[];
-    combustivel?: string[];
+    marca?: string
+    cor?: string
+    combustivel?: string
+    carroceria?: string
+    cambio?: string
+    precoMax?: string
+    precoMin?: string
     ordenacao?: string
 }

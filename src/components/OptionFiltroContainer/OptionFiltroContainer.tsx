@@ -1,13 +1,13 @@
 import './OptionFiltroContainer.css'
-import {ChangeEvent} from "react";
+import React from "react";
 
 type props = {
     title: string,
     value: string[],
     group: string,
-    handle: (e: ChangeEvent<HTMLInputElement>) => void,
-    todos: boolean
-    selected: string[]
+    handle: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    todos: boolean,
+    selected: string
 }
 
 const OptionFiltroContainer = ({ title, value, group, handle, todos, selected}: props) => {

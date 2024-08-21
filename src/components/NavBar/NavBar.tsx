@@ -9,7 +9,7 @@ const NavBar = () => {
 
     const handleScroll = () => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        if (scrollTop > 30) {
+        if (scrollTop > 40) {
             setIsSticky(true);
         } else {
             setIsSticky(false);

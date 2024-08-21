@@ -1,34 +1,39 @@
 .categorias-card-inicio {
-    background-color: #fafafa;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 8px;
+    padding: 8px;
+    border: none;
+    background: #fafafa;
+    margin: 0 8px;
+    border-radius: 4px;
     transition: 0.2s;
-    border: 0;
 }
 
 .categorias-card-inicio:hover {
-    box-shadow: rgba(255, 255, 255, 0.8) 0 0 10px;
+    box-shadow: rgba(255,255,255, 0.8) 0 0 15px;
 }
 
 .categorias-card-inicio img {
-    width: auto;
-    max-width: 80%;
-    height: auto;
-    margin-bottom: 12px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: contain;
 }
 
-.categorias-card-inicio h1 {
-    font-size: 12px;
-    font-weight: bold;
+.title-card-categoria {
     color: #121217;
     margin: 0;
+    font-size: 16px;
 }
 
 .div-itens-card-categoria {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
+}
+
+.title-card-categoria {
+    padding-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
 }

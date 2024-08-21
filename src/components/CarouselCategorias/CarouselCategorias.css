@@ -1,12 +1,6 @@
 .categorias-div-inicio {
     max-width: 100%;
 }
-.categorias-div-inicio h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 24px;
-    color: #FAFAFA;
-}
 
 .div-cards-categorias-carousel-inicio {
     display: flex;
