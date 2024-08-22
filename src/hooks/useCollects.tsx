@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Vehicle} from "../interfaces/Vehicle.ts";
 
 const useCollects = (vehicles: Vehicle[] = []) => {
-    const [marcas] = useState<string[]>([]);
+    const [marcas, setMarcas] = useState<string[]>([]);
     const [cores] = useState<string[]>([]);
     const [cambios] = useState<string[]>([]);
     const [carrocerias] = useState<string[]>([]);
@@ -17,8 +17,10 @@ const useCollects = (vehicles: Vehicle[] = []) => {
 
     const collectMarcas = (vehicles: Vehicle[]) => {
         vehicles.forEach(vehicle => {
+            console.log(vehicle.marca.toLowerCase())
             if (!marcas.includes(vehicle.marca.toLowerCase()))
                 marcas.push(vehicle.marca.toLowerCase());
+            setMarcas(marcas.sort((a, b) => a > b ? 1 : -1));
         })
     }
 
