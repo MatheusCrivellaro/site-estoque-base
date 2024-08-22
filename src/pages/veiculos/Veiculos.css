@@ -30,7 +30,7 @@
 .clear-filtro-button {
     background-color: #282833;
     border: none;
-    font-weight: 700;
+    font-weight: 500;
     padding: 4px 24px;
     border-radius: 8px;
     font-size: 16px;
@@ -46,7 +46,7 @@
 .filtro-button {
     background-color: #dfab21;
     color: #FAFAFA;
-    font-weight: 700;
+    font-weight: 500;
     border: none;
     padding: 4px 24px;
     border-radius: 8px;
@@ -65,7 +65,7 @@
     border-radius: 8px;
     padding: 4px 24px;
     color: #FAFAFA;
-    font-weight: 700;
+    font-weight: 500;
     background-color: #282833;
     width: 100%;
     margin-top: 12px;
@@ -256,7 +256,7 @@
     background: #dfab21;
     border-radius: 8px;
     color: #fafafa;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     margin-bottom: 12px;
 }
@@ -268,7 +268,7 @@
     border: none;
     background: #282833;
     color: #fafafa;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     border-radius: 8px;
 }
