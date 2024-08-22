@@ -274,3 +274,12 @@
     flex-direction: column;
     width: 15%;
 }
+
+.button-ordenar-menu-informations-list-veiculos {
+    width: max-content;
+    background: #282833;
+}
+
+.button-ordenar-menu-informations-list-veiculos a{
+    color: #fafafa;
+}
