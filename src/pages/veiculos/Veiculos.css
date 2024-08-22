@@ -8,6 +8,7 @@
     background: #121217;
     padding: 24px;
     border-right: #282833 1px solid;
+    transition: 0.3s;
 }
 
 .cards-div-veiculos {
@@ -150,7 +151,7 @@
 }
 
 .menu-preco-filtros-div-veiculos input::placeholder {
-    color: #b4b4ca;
+    color: #5a5a63;
     font-size: 14px;
 }
 
@@ -235,4 +236,41 @@
 
 .div-estoque-cards {
     display: flex;
+}
+
+.informations-list-veiculos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.button-informations-list-veiculos {
+    height: min-content;
+    width: 100%;
+    padding: 4px 0;
+    border: none;
+    background: #dfab21;
+    border-radius: 8px;
+    color: #fafafa;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.button-ordenar-informations-list-veiculos {
+    height: min-content;
+    width: 100%;
+    padding: 4px 0;
+    border: none;
+    background: #282833;
+    color: #fafafa;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.div-buttons-informations-list-veiculos {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
 }
