@@ -29,6 +29,7 @@
 
 .img-padrao-card {
     width: 100%;
+    border-radius: 8px 8px 0 0;
 }
 
 .card-veiculo-estoque h4 span {
