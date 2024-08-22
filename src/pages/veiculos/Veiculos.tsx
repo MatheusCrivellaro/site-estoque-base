@@ -251,7 +251,7 @@ const Veiculos = () => {
                                 </div>
                                 <div className="div-buttons-informations-list-veiculos">
                                     <button onClick={toggleCollapse}
-                                            className="button-informations-list-veiculos">Filtros
+                                            className="button-informations-list-veiculos">Filtrar
                                     </button>
                                     <button className="dropdown-toggle button-ordenar-informations-list-veiculos"
                                             type="button" data-bs-toggle="dropdown"
