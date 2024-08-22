@@ -8,16 +8,16 @@ const ButtonSuspense = () => {
     return (
         <div className="div-button-suspense">
             <div className="button-suspense">
-                <a href=""> <img src={facebook} alt="" className="button-suspense-content"/></a>
+                <a href="https://www.facebook.com/carcentermultimarcasosasco?locale=pt_BR"><img src={facebook} alt="" className="button-suspense-content"/></a>
             </div>
             <div className="button-suspense">
-            <img src={instagram} alt="" className="button-suspense-content"/>
+                <a href="https://www.instagram.com/carcentermultimarcas/"><img src={instagram} alt="" className="button-suspense-content"/></a>
             </div>
             <div className="button-suspense">
-                <img src={whatsapp} alt="" className="button-suspense-content"/>
+                <a href="https://api.whatsapp.com/send/?phone=5511934524004&text&type=phone_number&app_absent=0"><img src={whatsapp} alt="" className="button-suspense-content"/></a>
             </div>
         </div>
-    )
+)
 }
 
 export default ButtonSuspense
