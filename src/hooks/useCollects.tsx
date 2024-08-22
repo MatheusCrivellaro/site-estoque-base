@@ -17,7 +17,6 @@ const useCollects = (vehicles: Vehicle[] = []) => {
 
     const collectMarcas = (vehicles: Vehicle[]) => {
         vehicles.forEach(vehicle => {
-            console.log(vehicle.marca.toLowerCase())
             if (!marcas.includes(vehicle.marca.toLowerCase()))
                 marcas.push(vehicle.marca.toLowerCase());
             setMarcas(marcas.sort((a, b) => a > b ? 1 : -1));

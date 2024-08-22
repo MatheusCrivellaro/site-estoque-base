@@ -1,5 +1,6 @@
 import './CarouselCards.css'
 import {Vehicle} from "../../interfaces/Vehicle.ts";
+import imgPadrao from '../../../public/imgPadrao.jpg'
 
 type props = {
     veiculo: Vehicle
@@ -13,12 +14,12 @@ const CarouselCards = ({ veiculo }: props) => {
                     if (index === 0)
                         return (
                             <div className="carousel-item div-card-carousel active" key={index}>
-                                <img src={value.uri} alt=""/>
+                                <img src={value.uri} alt="" onError={(e) => (e.currentTarget.src = imgPadrao)}/>
                             </div>
                         )
                     return (
                         <div className="carousel-item div-card-carousel" key={index}>
-                            <img src={value.uri} alt=""/>
+                            <img src={value.uri} alt="" onError={(e) => (e.currentTarget.src = imgPadrao)}/>
                         </div>
                     )
                 })}
