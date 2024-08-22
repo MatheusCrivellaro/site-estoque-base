@@ -163,7 +163,7 @@ const Veiculos = () => {
                                 </button>
                             </div>
                             <div className="col-6 div-filtro-button">
-                                <button className="filtro-button" onClick={() => applyFilter("", "")}>Filtrar <LuFilter
+                                <button className="filtro-button" onClick={() => applyFilter("", "")}>Aplicar <LuFilter
                                     className="icon-button-filtro"/></button>
                             </div>
                         </div>
@@ -218,7 +218,7 @@ const Veiculos = () => {
                                            handle={(e) => handleSelectCarroceria(e.target.value)}
                                            selected={selectedCarroceria} todos={true}/>
                     <div className="col-12 div-filtro-button">
-                        <button className="filtro-button" onClick={() => applyFilter("", "")}>Filtrar <LuFilter
+                        <button className="filtro-button" onClick={() => applyFilter("", "")}>Aplicar <LuFilter
                             className="icon-button-filtro"/></button>
                     </div>
                 </div>}
