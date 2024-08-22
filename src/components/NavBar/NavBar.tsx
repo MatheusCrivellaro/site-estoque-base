@@ -61,10 +61,12 @@ const NavBar = () => {
                     >
                         Sobre nós
                     </NavLink>
-                    <button className='whatsapp-button-nav button-nav'>
-                        <p className='text-whatsapp-button-nav text-button-nav'>(11) 3682-4544</p>
-                        <FaWhatsapp className="icon-wpp-nav"/>
-                    </button>
+                    <a href="https://api.whatsapp.com/send/?phone=5511934524004&text&type=phone_number&app_absent=0" className="text-decoration-none">
+                        <button className='whatsapp-button-nav button-nav'>
+                            <p className='text-whatsapp-button-nav text-button-nav'>(11) 3682-4544</p>
+                            <FaWhatsapp className="icon-wpp-nav"/>
+                        </button>
+                    </a>
                 </div>
             </nav>
         </div>
