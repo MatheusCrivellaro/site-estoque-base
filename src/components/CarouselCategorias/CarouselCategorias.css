@@ -1,8 +1,52 @@
 .categorias-div-inicio {
     max-width: 100%;
+    position: relative;
 }
 
 .div-cards-categorias-carousel-inicio {
+    width: 100%;
     display: flex;
-    justify-content: start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 15px;
+}
+
+.div-button-scroll-categorias {
+    position: absolute;
+    top: 15%;
+    height: 50px;
+    width: 50px;
+}
+
+.arrow-left-categoria {
+    left: 0;
+}
+
+.arrow-right-categoria {
+    right: 0;
+}
+
+.div-button-scroll-categorias button {
+    background: rgba(0,0,0, 0);
+    border: none;
+    transition: 0.2s;
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-button-scroll-categorias button:hover {
+    background: rgba(255,255,255, 0.2);
+    height: 50px;
+    width: 50px;
+    border-radius: 360px;
+}
+
+.arrow-carousel-categoria {
+    font-size: 32px;
+    color: #dfab21;
 }

@@ -17,6 +17,8 @@ const OptionFiltroContainer = ({ title, value, group, handle, todos, selected}: 
             return "flex"
         if (nome === "suv / utilitário esportivo")
             return "suv / utilitário"
+        if (nome === "mercedes-benz")
+            return "mercedes"
         return nome
     }
 

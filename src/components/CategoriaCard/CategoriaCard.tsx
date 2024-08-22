@@ -17,7 +17,7 @@ const CategoriaCard = ({ image, title, handleSelectedMarca }:props) => {
     }
 
     return (
-        <button onClick={() => handleSelectedMarca(title)} className="categorias-card-inicio col-1">
+        <button onClick={() => handleSelectedMarca(title)} className="categorias-card-inicio">
             <div className="div-itens-card-categoria">
                 <img src={image} alt=""/>
                 <h1 className="title-card-categoria">{trataTitle(title)}</h1>

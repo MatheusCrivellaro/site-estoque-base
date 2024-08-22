@@ -232,7 +232,6 @@ const Veiculos = () => {
                             </div> :
                             <div className="cards-itens-div-none-veiculos">
                                 <div className="div-container-carousel-categorias">
-                                    <h1 className="div-container-carousel-categorias-title">Marcas</h1>
                                     <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel}
                                                         marcas={marcas}/>
                                 </div>
@@ -241,7 +240,6 @@ const Veiculos = () => {
                             </div>) :
                         <div className={`cards-itens-div-veiculos row ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
-                                <h1 className="div-container-carousel-categorias-title">Marcas</h1>
                                 <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas}/>
                             </div>
                             <div className="informations-list-veiculos">

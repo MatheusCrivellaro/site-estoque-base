@@ -3,17 +3,25 @@
 }
 
 .filtro-div-veiculos {
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
     background: #121217;
     padding: 24px;
     border-right: #282833 1px solid;
     transition: 0.3s;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 .cards-div-veiculos {
     background: #121217;
+    height: 100vh;
     padding: 24px 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 .menu-filtros-div-veiculos {
@@ -189,13 +197,6 @@
 
 .margin-list-veiculos {
     margin: 12px;
-}
-
-.div-container-carousel-categorias-title {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 24px;
-    color: #FAFAFA;
 }
 
 .div-pre-content-estoque {

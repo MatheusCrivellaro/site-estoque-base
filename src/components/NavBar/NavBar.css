@@ -8,6 +8,7 @@ nav {
 
 .nav-container {
     position: relative;
+    height: 80px;
 }
 
 .div-horarios-nav {
