@@ -110,12 +110,17 @@
 }
 
 .button-veiculos-destaque-inicio {
-    background-color: #3F3F50;
+    background-color: #4f4f63;
     color: #FAFAFA;
-    font-size:  18px;
+    font-size:  16px;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 12px 32px;
     border-radius: 8px;
+    transition: 0.2s;
+}
+
+.button-veiculos-destaque-inicio:hover {
+    background: #3F3F50;
 }
 
 .avaliacoes-div-inicio {

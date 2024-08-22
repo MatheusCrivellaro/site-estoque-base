@@ -35,6 +35,11 @@
     font-size: 16px;
     width: 100%;
     color: #fafafa;
+    transition: 0.2s;
+}
+
+.clear-filtro-button:hover {
+    background-color: #3F3F50;
 }
 
 .filtro-button {
@@ -47,6 +52,11 @@
     font-size: 16px;
     height: min-content;
     width: 100%;
+    transition: 0.2s;
+}
+
+.filtro-button:hover {
+    background-color: rgba(223, 171, 33, 0.8);
 }
 
 .button-ordenar {
@@ -58,6 +68,11 @@
     background-color: #282833;
     width: 100%;
     margin-top: 12px;
+    transition: 0.2s;
+}
+
+.button-ordenar:hover {
+    background-color: #3F3F50;
 }
 
 .button-ordenar-menu {
@@ -135,7 +150,7 @@
 }
 
 .menu-preco-filtros-div-veiculos input::placeholder {
-    color: #b1b1b1;
+    color: #b4b4ca;
     font-size: 14px;
 }
 
