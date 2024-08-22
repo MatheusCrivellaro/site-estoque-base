@@ -29,7 +29,7 @@ const CarouselCategorias = ({ marcas, handleSelectedMarca }: props) => {
 
     return (
         <div className="categorias-div-inicio">
-            <div className="div-button-scroll-categorias arrow-left-categoria">
+            <div className="div-button-scroll-categorias bg-arrow-left arrow-left-categoria">
                 <button onClick={scrollLeft}><MdArrowBackIosNew className="arrow-carousel-categoria"/></button>
             </div>
             <div className="div-cards-categorias-carousel-inicio" ref={carouselRef}>
@@ -44,7 +44,7 @@ const CarouselCategorias = ({ marcas, handleSelectedMarca }: props) => {
                     )
                 }
             </div>
-            <div className="div-button-scroll-categorias arrow-right-categoria">
+            <div className="div-button-scroll-categorias bg-arrow-right arrow-right-categoria">
                 <button onClick={scrollRight}><MdArrowForwardIos className="arrow-carousel-categoria"/></button>
             </div>
         </div>

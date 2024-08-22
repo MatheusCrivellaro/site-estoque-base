@@ -14,9 +14,9 @@
 
 .div-button-scroll-categorias {
     position: absolute;
-    top: 15%;
-    height: 50px;
-    width: 50px;
+    top: 0;
+    height: 100%;
+    width: auto;
 }
 
 .arrow-left-categoria {
@@ -28,25 +28,28 @@
 }
 
 .div-button-scroll-categorias button {
-    background: rgba(0,0,0, 0);
     border: none;
     transition: 0.2s;
-    height: 50px;
-    width: 50px;
-    border-radius: 360px;
+    height: 100%;
+    width: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .div-button-scroll-categorias button:hover {
-    background: rgba(255,255,255, 0.2);
-    height: 50px;
-    width: 50px;
-    border-radius: 360px;
+    width: 87px;
+}
+
+.bg-arrow-left button {
+    background: linear-gradient(90deg, rgba(18, 18, 23, 1), rgba(18, 18, 23, 1),rgba(18, 18, 23, 1),  rgba(18, 18, 23, 0));
+}
+
+.bg-arrow-right button {
+    background: linear-gradient(270deg, rgba(18, 18, 23, 1), rgba(18, 18, 23, 1),rgba(18, 18, 23, 1),  rgba(18, 18, 23, 0));
 }
 
 .arrow-carousel-categoria {
-    font-size: 32px;
+    font-size: 24px;
     color: #dfab21;
 }

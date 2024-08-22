@@ -150,79 +150,87 @@ const Veiculos = () => {
     return (
         <div>
             <ButtonSuspense/>
-            <div className="veiculos row" id="veiculos">
-                {isOpenFilter && <div className="filtro-div-veiculos col-3">
-                    <div className="menu-filtros-div-veiculos">
-                        <h1 className="col-12">Filtrar</h1>
-                        <div className="d-flex col-12">
-                            <div className="col-6 div-clear-filtro-button">
-                                <button className="clear-filtro-button" onClick={() => {
-                                    handleUpdateClearFilters()
-                                }}>
-                                    Limpar Filtros
+            <div className="veiculos" id="veiculos">
+                {isOpenFilter &&
+                    <div className="filtro-div-veiculos">
+                        <div className="menu-filtros-div-veiculos">
+                            <h1 className="col-12">Filtrar</h1>
+                            <div className="d-flex col-12">
+                                <div className="col-6 div-clear-filtro-button">
+                                    <button className="clear-filtro-button" onClick={() => {
+                                        handleUpdateClearFilters()
+                                    }}>
+                                        Limpar Filtros
+                                    </button>
+                                </div>
+                                <div className="col-6 div-filtro-button">
+                                    <button className="filtro-button"
+                                            onClick={() => applyFilter("", "")}>Aplicar <LuFilter
+                                        className="icon-button-filtro"/></button>
+                                </div>
+                            </div>
+                            <div className="dropdown">
+                                <button className="dropdown-toggle button-ordenar" type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                    Ordenar Por
                                 </button>
+                                <ul className="dropdown-menu button-ordenar-menu">
+                                    <li><a className="dropdown-item" href="#"
+                                           onClick={() => applyFilter("maior-preco", "")}>Maior
+                                        Preço</a></li>
+                                    <li><a className="dropdown-item" href="#"
+                                           onClick={() => applyFilter("menor-preco", "")}>Menor
+                                        Preço</a></li>
+                                    <li><a className="dropdown-item" href="#"
+                                           onClick={() => applyFilter("marca-modelo", "")}>Marca/Modelo</a></li>
+                                    <li><a className="dropdown-item" href="#"
+                                           onClick={() => applyFilter("ano-mais-novo", "")}>Ano
+                                        Mais Novo</a></li>
+                                    <li><a className="dropdown-item" href="#"
+                                           onClick={() => applyFilter("menor-km", "")}>Menor
+                                        KM</a></li>
+                                </ul>
                             </div>
-                            <div className="col-6 div-filtro-button">
-                                <button className="filtro-button" onClick={() => applyFilter("", "")}>Aplicar <LuFilter
-                                    className="icon-button-filtro"/></button>
+                        </div>
+                        <div className="menu-preco-filtros-div-veiculos">
+                            <h1>Preço</h1>
+                            <div className="div-input-preco">
+                                <label htmlFor="de">De</label>
+                                <input type="number" placeholder="R$0,00" id="de" value={precoMin} min="0"
+                                       max={precoMax}
+                                       step="10000" onChange={(e) => handlePrecoMinChange(e.target.value)}/>
+                            </div>
+                            <div className="div-input-preco">
+                                <label htmlFor="ate">Até</label>
+                                <input type="number" placeholder="R$1.000.000,00" id="ate" value={precoMax}
+                                       min={precoMin}
+                                       max="5000000" step="10000"
+                                       onChange={(e) => handlePrecoMaxChange(e.target.value)}/>
                             </div>
                         </div>
-                        <div className="dropdown">
-                            <button className="dropdown-toggle button-ordenar" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                Ordenar Por
-                            </button>
-                            <ul className="dropdown-menu button-ordenar-menu">
-                                <li><a className="dropdown-item" href="#"
-                                       onClick={() => applyFilter("maior-preco", "")}>Maior
-                                    Preço</a></li>
-                                <li><a className="dropdown-item" href="#"
-                                       onClick={() => applyFilter("menor-preco", "")}>Menor
-                                    Preço</a></li>
-                                <li><a className="dropdown-item" href="#"
-                                       onClick={() => applyFilter("marca-modelo", "")}>Marca/Modelo</a></li>
-                                <li><a className="dropdown-item" href="#"
-                                       onClick={() => applyFilter("ano-mais-novo", "")}>Ano
-                                    Mais Novo</a></li>
-                                <li><a className="dropdown-item" href="#" onClick={() => applyFilter("menor-km", "")}>Menor
-                                    KM</a></li>
-                            </ul>
+                        <OptionFiltroContainer title="Marcas" group={"marca"} value={marcas}
+                                               handle={(e) => handleSelectMarca(e.target.value)}
+                                               selected={selectedMarcas} todos={true}/>
+                        <OptionFiltroContainer title="Cores" group={"cor"} value={cores}
+                                               handle={(e) => handleSelectCor(e.target.value)}
+                                               selected={selectedColors} todos={true}/>
+                        <OptionFiltroContainer title="Câmbio" group={"cambio"} value={cambios}
+                                               handle={(e) => handleSelectCambio(e.target.value)}
+                                               selected={selectedCambios} todos={true}/>
+                        <OptionFiltroContainer title="Combustível" group={"combustivel"} value={combustiveis}
+                                               handle={(e) => handleSelectCombustivel(e.target.value)}
+                                               selected={selectedCombustivel} todos={true}/>
+                        <OptionFiltroContainer title="Carroceria" group={"carroceria"} value={carrocerias}
+                                               handle={(e) => handleSelectCarroceria(e.target.value)}
+                                               selected={selectedCarroceria} todos={true}/>
+                        <div className="col-12 div-filtro-button">
+                            <button className="filtro-button" onClick={() => applyFilter("", "")}>Aplicar <LuFilter
+                                className="icon-button-filtro"/></button>
                         </div>
                     </div>
-                    <div className="menu-preco-filtros-div-veiculos">
-                        <h1>Preço</h1>
-                        <div className="div-input-preco">
-                            <label htmlFor="de">De</label>
-                            <input type="number" placeholder="R$0,00" id="de" value={precoMin} min="0" max={precoMax}
-                                   step="10000" onChange={(e) => handlePrecoMinChange(e.target.value)}/>
-                        </div>
-                        <div className="div-input-preco">
-                            <label htmlFor="ate">Até</label>
-                            <input type="number" placeholder="R$1.000.000,00" id="ate" value={precoMax} min={precoMin}
-                                   max="5000000" step="10000" onChange={(e) => handlePrecoMaxChange(e.target.value)}/>
-                        </div>
-                    </div>
-                    <OptionFiltroContainer title="Marcas" group={"marca"} value={marcas}
-                                           handle={(e) => handleSelectMarca(e.target.value)}
-                                           selected={selectedMarcas} todos={true}/>
-                    <OptionFiltroContainer title="Cores" group={"cor"} value={cores}
-                                           handle={(e) => handleSelectCor(e.target.value)}
-                                           selected={selectedColors} todos={true}/>
-                    <OptionFiltroContainer title="Câmbio" group={"cambio"} value={cambios}
-                                           handle={(e) => handleSelectCambio(e.target.value)}
-                                           selected={selectedCambios} todos={true}/>
-                    <OptionFiltroContainer title="Combustível" group={"combustivel"} value={combustiveis}
-                                           handle={(e) => handleSelectCombustivel(e.target.value)}
-                                           selected={selectedCombustivel} todos={true}/>
-                    <OptionFiltroContainer title="Carroceria" group={"carroceria"} value={carrocerias}
-                                           handle={(e) => handleSelectCarroceria(e.target.value)}
-                                           selected={selectedCarroceria} todos={true}/>
-                    <div className="col-12 div-filtro-button">
-                        <button className="filtro-button" onClick={() => applyFilter("", "")}>Aplicar <LuFilter
-                            className="icon-button-filtro"/></button>
-                    </div>
-                </div>}
-                <div className={`cards-div-veiculos ${isOpenFilter ? "col-9" : "col-12"}`}>
+                }
+                <div className={`cards-div-veiculos ${isOpenFilter ? "is-open-div-cards" : "is-close-div-cards"}`}>
                     {filteredVehicles.length === 0 ?
                         (isLoading ?
                             <div className="spinner-estoque-carros-div">
@@ -238,7 +246,7 @@ const Veiculos = () => {
                                 <h1 className="col-12 cards-itens-div-veiculos-title">Veículos em destaque</h1>
                                 <h2>Nenhum veículo foi encontrado :(</h2>
                             </div>) :
-                        <div className={`cards-itens-div-veiculos row ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
+                        <div className={`cards-itens-div-veiculos ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
                                 <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas}/>
                             </div>
@@ -275,9 +283,11 @@ const Veiculos = () => {
                                 </div>
                             </div>
 
-                            {filteredVehicles.length === 0 ? <h2>Nada encontrado</h2> : filteredVehicles?.map(value =>
-                                <CardVeiculoEstoque veiculo={value} key={value.codigo}/>
-                            )}
+                            <div className="list-veiculos-container">
+                                {filteredVehicles.length === 0 ? <h2>Nada encontrado</h2> : filteredVehicles?.map(value =>
+                                    <CardVeiculoEstoque veiculo={value} key={value.codigo}/>
+                                )}
+                            </div>
                         </div>
                     }
                 </div>

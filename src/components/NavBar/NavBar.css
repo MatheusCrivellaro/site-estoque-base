@@ -4,11 +4,11 @@ nav {
     justify-content: space-between;
     background: #212121;
     z-index: 99;
+    height: 80px;
 }
 
 .nav-container {
     position: relative;
-    height: 80px;
 }
 
 .div-horarios-nav {

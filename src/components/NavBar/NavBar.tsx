@@ -1,29 +1,32 @@
 import { FaWhatsapp } from "react-icons/fa";
 import {NavLink} from "react-router-dom";
 import './NavBar.css';
+import {useEffect, useState} from "react";
 
 const NavBar = () => {
 
-    // const [isSticky, setIsSticky] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
 
-    // const handleScroll = () => {
-    //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    //     if (scrollTop > 40) {
-    //         setIsSticky(true);
-    //     } else {
-    //         setIsSticky(false);
-    //     }
-    // };
-    //
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, [location.pathname])
+    const handleScroll = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        if (scrollTop > 40) {
+            setIsSticky(true);
+        } else {
+            setIsSticky(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [location.pathname])
 
     return (
         <div className="nav-container">
-            {/*className={isSticky ? "suspense-nav" : ""}*/}
-            <nav className="suspense-nav">
+            <div className="div-horarios-nav">
+                <span>Horário de atendimento</span>: Seg a Sex - 9h às 18h | Sáb - 9h às 16h
+            </div>
+            <nav className={isSticky ? "suspense-nav" : ""}>
                 <div className="title-div-nav">
                     <img src="https://static.autoconf.com.br/site-car-center-912/build/logo.png" alt=""/>
                 </div>

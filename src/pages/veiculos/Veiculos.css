@@ -1,27 +1,22 @@
 .veiculos {
     max-width: 100%;
+    position: relative;
+    display: flex;
 }
 
 .filtro-div-veiculos {
-    height: 100vh;
-    background: #121217;
-    padding: 24px;
-    border-right: #282833 1px solid;
-    transition: 0.3s;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    scroll-behavior: smooth;
+    min-height: 100vh;
+    border-right: #282833 solid 1px;
+    padding: 40px 16px;
+    width: 18%;
 }
 
-.cards-div-veiculos {
-    background: #121217;
-    height: 100vh;
-    padding: 24px 0;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    scroll-behavior: smooth;
+.is-open-div-cards {
+    max-width: 80%;
+}
+
+.is-close-div-cards {
+    max-width: 100%;
 }
 
 .menu-filtros-div-veiculos {
@@ -141,6 +136,7 @@
     font-size: 14px;
     padding: 8px 16px;
     border-radius: 8px;
+    width: 15%;
 }
 
 .menu-preco-filtros-div-veiculos input {
@@ -148,10 +144,12 @@
     border-right: none;
     border-top: none;
     border-bottom: none;
-    background-color: #FAFAFA;
+    background-color: #282833;
     padding: 8px;
     color: #FAFAFA;
     font-size: 14px;
+    width: 85%;
+    border-radius: 0 8px 8px 0 ;
 }
 
 .menu-preco-filtros-div-veiculos input:focus {
@@ -174,11 +172,7 @@
 
 .div-input-preco {
     background-color: #282833;
-}
-
-.div-input-preco input {
-    width: max-content;
-    background-color: #282833;
+    width: 100%;
 }
 
 .marcas-cards-div-veiculos {
@@ -259,7 +253,7 @@
     color: #fafafa;
     font-weight: 500;
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-right: 12px;
 }
 
 .button-ordenar-informations-list-veiculos {
@@ -276,8 +270,9 @@
 
 .div-buttons-informations-list-veiculos {
     display: flex;
-    flex-direction: column;
-    width: 15%;
+    align-items: center;
+    width: 30%;
+    height: 100%;
 }
 
 .button-ordenar-menu-informations-list-veiculos {
@@ -287,4 +282,10 @@
 
 .button-ordenar-menu-informations-list-veiculos a{
     color: #fafafa;
+}
+
+.list-veiculos-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }

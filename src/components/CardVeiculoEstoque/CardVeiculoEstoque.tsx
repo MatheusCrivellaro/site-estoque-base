@@ -17,7 +17,7 @@ const CardVeiculoEstoque = ({ veiculo }:props) => {
     const { getLogo } = useGetLogoEmpresas()
 
     return (
-        <div className="col-3 card-veiculo-div-estoque">
+        <div className="card-veiculo-div-estoque">
             <div className="card-veiculo-estoque">
                 <div className="div-container-carousel-categorias-card-veiculo">
                     {veiculo.fotos.foto.length !== 0 ? <CarouselCards veiculo={veiculo} /> : <img src={imgPadrao} alt="" className="img-padrao-card"/>}
