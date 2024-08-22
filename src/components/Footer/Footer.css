@@ -1,9 +1,9 @@
 footer {
-    padding: 48px 40px;
-    background: linear-gradient(180deg, #282833, #121217);
+    padding: 48px 40px 24px;
+    background: #212121;
     border-top: 4px solid #EBCA6A;
     display: flex;
-    justify-content: space-between;
+    width: 100%;
 }
 
 footer h1 {
@@ -16,6 +16,11 @@ footer h2, h3 {
     color: #FAFAFA;
     font-size: 16px;
     font-weight: bold;
+}
+
+footer img {
+    width: auto;
+    height: 50px;
 }
 
 .footer-option {
@@ -93,4 +98,12 @@ footer h2, h3 {
 .icon-informacao-localizacao-card-inicio {
     color: #EBCA6A;
     font-size: 22px;
+}
+
+.direitos-autorais-footer {
+    padding: 12px;
+}
+
+.direitos-autorais-footer h3 {
+    margin: 0;
 }

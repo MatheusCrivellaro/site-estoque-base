@@ -232,7 +232,7 @@ const Veiculos = () => {
                             <h1 className="col-12 cards-itens-div-veiculos-title">Veículos em destaque</h1>
                             <h2>Nenhum veículo foi encontrado :(</h2>
                         </div>) :
-                    <div className="cards-itens-div-veiculos row">
+                    <div className={`cards-itens-div-veiculos row ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                         <div className="div-container-carousel-categorias">
                             <h1 className="div-container-carousel-categorias-title">Marcas</h1>
                             <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas} />

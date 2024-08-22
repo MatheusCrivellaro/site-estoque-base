@@ -40,8 +40,10 @@ const Footer = () => {
                 </div>
             </div>
             <footer>
-                <h1>Logo</h1>
-                <div className="footer-options-div">
+                <div className="col-4">
+                    <img src="https://static.autoconf.com.br/site-car-center-912/build/logo.png" alt=""/>
+                </div>
+                <div className="footer-options-div col-4">
                     <h2>Navegação</h2>
                     <Link to="/" className="footer-option">Início</Link>
                     <Link to="/veiculos" className="footer-option">Veículos</Link>
@@ -49,13 +51,16 @@ const Footer = () => {
                     <Link to="/venda-seu-veiculo" className="footer-option">Venda seu veículo</Link>
                     <Link to="/financiamento" className="footer-option">Financiamento</Link>
                 </div>
-                <div>
+                <div className="col-4 text-end">
                     <h3>Redes Sociais</h3>
                     <FaFacebookF className="icon-redes-footer"/>
                     <FaInstagram className="icon-redes-footer"/>
                     <FaXTwitter className="icon-redes-footer"/>
                 </div>
             </footer>
+            <div className="direitos-autorais-footer">
+                <h3>Desenvolvido por AutoDealer Sistemas</h3>
+            </div>
         </div>
     )
 }
