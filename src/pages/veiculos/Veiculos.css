@@ -74,11 +74,10 @@
 }
 
 .div-clear-filtro-button {
-    padding-right: 8px;
+    padding-right: 12px;
 }
 
 .div-filtro-button {
-    padding-left: 8px;
     display: flex;
 }
 

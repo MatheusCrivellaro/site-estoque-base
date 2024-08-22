@@ -21,6 +21,10 @@
     margin: 0;
 }
 
+.img-padrao-card {
+    width: 100%;
+}
+
 .card-veiculo-estoque h4 span {
     color: #fafafa;
     font-size: 14px;

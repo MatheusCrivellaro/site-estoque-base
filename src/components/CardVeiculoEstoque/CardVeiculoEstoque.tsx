@@ -6,6 +6,7 @@ import {MdOutlineCalendarMonth} from "react-icons/md";
 import {SlSpeedometer} from "react-icons/sl";
 import useGetLogoEmpresas from "../../hooks/useGetLogoEmpresas.tsx";
 import CarouselCards from "../CarouselCards/CarouselCards.tsx";
+import imgPadrao from '../../../public/th.jpeg'
 
 type props = {
     veiculo: Vehicle
@@ -19,7 +20,7 @@ const CardVeiculoEstoque = ({ veiculo }:props) => {
         <div className="col-3 card-veiculo-div-estoque">
             <div className="card-veiculo-estoque shadow">
                 <div>
-                    <CarouselCards veiculo={veiculo} />
+                    {veiculo.fotos.foto.length !== 0 ? <CarouselCards veiculo={veiculo} /> : <img src={imgPadrao} alt="" className="img-padrao-card"/>}
                 </div>
                 <div className="div-informations-card-estoque">
                     <h4><img src={getLogo(veiculo.marca)} alt="" className="img-logo-card-veiculo"/> <span>{veiculo.marca + " "}</span>{veiculo.modelo}</h4>

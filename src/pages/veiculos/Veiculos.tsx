@@ -148,14 +148,12 @@ const Veiculos = () => {
                     <h1 className="col-12">Filtrar</h1>
                     <div className="d-flex col-12">
                         <div className="col-6 div-clear-filtro-button">
-                            <button className="clear-filtro-button" onClick={() => {
-                                handleUpdateClearFilters()
-                            }}>Limpar Filtros
+                            <button className="clear-filtro-button" onClick={() => {handleUpdateClearFilters()}}>
+                                Limpar Filtros
                             </button>
                         </div>
                         <div className="col-6 div-filtro-button">
-                            <button className="filtro-button" onClick={() => applyFilter("", "")}>Filtrar <LuFilter
-                                className="icon-button-filtro" /></button>
+                            <button className="filtro-button" onClick={() => applyFilter("", "")}>Filtrar <LuFilter className="icon-button-filtro" /></button>
                         </div>
                     </div>
                     <div className="dropdown">

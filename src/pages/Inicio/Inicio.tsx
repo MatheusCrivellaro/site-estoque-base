@@ -23,7 +23,7 @@ const Inicio = () => {
     };
 
     useEffect(() => {
-        setDestaques(data?.slice(0, 8))
+        setDestaques(data?.slice(0, 4))
     }, [data]);
 
     return (
