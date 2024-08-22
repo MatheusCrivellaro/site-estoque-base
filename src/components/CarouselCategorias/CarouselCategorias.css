@@ -4,5 +4,5 @@
 
 .div-cards-categorias-carousel-inicio {
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
