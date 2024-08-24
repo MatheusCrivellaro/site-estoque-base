@@ -37,7 +37,7 @@ const Inicio = () => {
 
             <div className="veiculos-destaque-div-inicio" id="veiculos-destaque">
                 <h1>Veículos em destaque</h1>
-                <div className="veiculos-destaque-cards-div-inicio row">
+                <div className="veiculos-destaque-cards-div-inicio">
                     {destaques?.map((i: Vehicle, index) =>
                         <CardVeiculoEstoque veiculo={i} key={"carro" + index}/>
                     )}

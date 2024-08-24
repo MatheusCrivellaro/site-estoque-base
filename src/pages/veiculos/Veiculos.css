@@ -6,9 +6,11 @@
 
 .filtro-div-veiculos {
     min-height: 100vh;
+    max-height: 100%;
     border-right: #282833 solid 1px;
-    padding: 40px 16px;
-    width: 18%;
+    width: 20%;
+    background-color: #121217;
+    padding: 40px 16px 0;
 }
 
 .is-open-div-cards {
@@ -36,7 +38,7 @@
     font-weight: 500;
     padding: 4px 24px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     color: #fafafa;
     transition: 0.2s;
@@ -53,7 +55,7 @@
     border: none;
     padding: 4px 24px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 14px;
     height: 100%;
     width: 100%;
     transition: 0.2s;
@@ -72,6 +74,7 @@
     background-color: #282833;
     width: 100%;
     margin-top: 12px;
+    font-size: 14px;
     transition: 0.2s;
 }
 
@@ -136,7 +139,7 @@
     font-size: 14px;
     padding: 8px 16px;
     border-radius: 8px;
-    width: 15%;
+    width: min-content;
 }
 
 .menu-preco-filtros-div-veiculos input {
@@ -148,8 +151,16 @@
     padding: 8px;
     color: #FAFAFA;
     font-size: 14px;
-    width: 85%;
-    border-radius: 0 8px 8px 0 ;
+    border-radius: 0 8px 8px 0;
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    color: #dfab21;
+    background-color: #dfab21;
 }
 
 .menu-preco-filtros-div-veiculos input:focus {
@@ -167,12 +178,18 @@
 }
 
 .menu-preco-filtros-div-veiculos {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .div-input-preco {
     background-color: #282833;
     width: 100%;
+    transition: 0.1s;
+    border: 1px solid #474759;
+}
+
+.div-input-preco:hover {
+    border: 1px solid #747487;
 }
 
 .marcas-cards-div-veiculos {
@@ -186,12 +203,9 @@
 }
 
 .div-container-carousel-categorias {
-    padding-bottom: 48px;
+    padding-bottom: 24px;
 }
 
-.margin-list-veiculos {
-    margin: 12px;
-}
 
 .div-pre-content-estoque {
     display: flex;
@@ -214,18 +228,24 @@
     font-weight: 600;
 }
 
-.cards-itens-div-none-veiculos h1 {
+.cards-itens-div-none-veiculos-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 24px;
     color: #FAFAFA;
 }
 
-.cards-itens-div-none-veiculos h2 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 96px;
+.cards-itens-div-none-veiculos-msg {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+.cards-itens-div-none-veiculos-msg-desenho {
+    font-weight: 300;
+    font-size: 64px;
+    color: #fafafa;
+    margin-top: 48px;
 }
 
 .cards-itens-div-none-veiculos {
@@ -241,31 +261,42 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .button-informations-list-veiculos {
-    height: min-content;
+    height: 100%;
     width: 100%;
-    padding: 4px 0;
+    padding: 8px 0;
     border: none;
     background: #dfab21;
     border-radius: 8px;
     color: #fafafa;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     margin-right: 12px;
+    transition: 0.2s;
+}
+
+.button-informations-list-veiculos:hover {
+    background-color: rgba(223, 171, 33, 0.8);
 }
 
 .button-ordenar-informations-list-veiculos {
     height: min-content;
     width: 100%;
-    padding: 4px 0;
+    padding: 8px 0;
     border: none;
     background: #282833;
     color: #fafafa;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     border-radius: 8px;
+    transition: 0.2s;
+}
+
+.button-ordenar-informations-list-veiculos:hover {
+    background: #3F3F50;
 }
 
 .div-buttons-informations-list-veiculos {
@@ -284,8 +315,15 @@
     color: #fafafa;
 }
 
-.list-veiculos-container {
+.list-veiculos-container-close-filter {
     width: 100%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    padding-bottom: 48px;
+}
+
+.list-veiculos-container-open-filter {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }

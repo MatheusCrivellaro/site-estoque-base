@@ -104,8 +104,8 @@
 }
 
 .veiculos-destaque-cards-div-inicio {
-    display: flex;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
     margin-bottom: 12px;
 }
 

@@ -118,13 +118,18 @@ const Veiculos = () => {
     }
 
     const handlePrecoMinChange = (value: string) => {
-        if (/^\d*$/.test(value) && value.length <= 11)
+        if (/^\d*$/.test(value) && value.length <= 11) {
             updateFilter('precoMin', value, setPrecoMin)
+            setPrecoMin(value)
+        }
     };
 
     const handlePrecoMaxChange = (value: string) => {
-        if (/^\d*$/.test(value) && value.length <= 11)
+        if (/^\d*$/.test(value) && value.length <= 11) {
+            console.log("entrou")
             updateFilter('precoMax', value, setPrecoMax)
+            setPrecoMax(value)
+        }
     };
 
     const handleUpdateClearFilters = () => {
@@ -243,8 +248,13 @@ const Veiculos = () => {
                                     <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel}
                                                         marcas={marcas}/>
                                 </div>
-                                <h1 className="col-12 cards-itens-div-veiculos-title">Veículos em destaque</h1>
-                                <h2>Nenhum veículo foi encontrado :(</h2>
+                                <div>
+                                    <h1 className="col-12 cards-itens-div-none-veiculos-title">Veículos em destaque</h1>
+                                    <h3><span>{filteredVehicles.length}</span> veículos encontrados</h3>
+                                </div>
+                                <h2 className="cards-itens-div-none-veiculos-msg-desenho">:(</h2>
+                                <h2 className="cards-itens-div-none-veiculos-msg">Ops, não há veículos disponíveis para
+                                    os filtros aplicados. Por favor, tente outra combinação de filtros</h2>
                             </div>) :
                         <div className={`cards-itens-div-veiculos ${!isOpenFilter ? "margin-list-veiculos" : ""}`}>
                             <div className="div-container-carousel-categorias">
@@ -283,7 +293,7 @@ const Veiculos = () => {
                                 </div>
                             </div>
 
-                            <div className="list-veiculos-container">
+                            <div className={isOpenFilter ? "list-veiculos-container-open-filter" : "list-veiculos-container-close-filter"}>
                                 {filteredVehicles.length === 0 ? <h2>Nada encontrado</h2> : filteredVehicles?.map(value =>
                                     <CardVeiculoEstoque veiculo={value} key={value.codigo}/>
                                 )}

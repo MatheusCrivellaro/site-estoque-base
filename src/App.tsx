@@ -41,7 +41,7 @@ function App() {
                     <Route path="/financiamento" element={<Financiamento />} />
                 </Routes>
             </div>
-            {location.pathname !== '/veiculos' && (<Footer />)}
+            <Footer />
         </div>
   )
 }
