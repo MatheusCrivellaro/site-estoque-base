@@ -9,7 +9,7 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    padding: 15px;
+    padding: 15px 40px;
 }
 
 .div-button-scroll-categorias {
@@ -17,6 +17,8 @@
     top: 0;
     height: 100%;
     width: auto;
+    display: flex;
+    align-items: center;
 }
 
 .arrow-left-categoria {
@@ -28,28 +30,29 @@
 }
 
 .div-button-scroll-categorias button {
-    border: none;
+    border: 1px solid transparent;
     transition: 0.2s;
-    height: 100%;
-    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: transparent;
+    padding: 6px;
+    border-radius: 50%;
 }
 
-.div-button-scroll-categorias button:hover {
-    width: 87px;
+.bg-arrow-left button:hover {
+    border: 1px solid #282833;
+    background: rgba(250, 250, 250, 0.4);
+    border-radius: 50%;
 }
 
-.bg-arrow-left button {
-    background: linear-gradient(90deg, rgba(18, 18, 23, 1), rgba(18, 18, 23, 1),rgba(18, 18, 23, 1),  rgba(18, 18, 23, 0));
-}
-
-.bg-arrow-right button {
-    background: linear-gradient(270deg, rgba(18, 18, 23, 1), rgba(18, 18, 23, 1),rgba(18, 18, 23, 1),  rgba(18, 18, 23, 0));
+.bg-arrow-right button:hover {
+    border: 1px solid #282833;
+    background: rgba(250, 250, 250, 0.4);
+    border-radius: 50%;
 }
 
 .arrow-carousel-categoria {
-    font-size: 24px;
+    font-size: 32px;
     color: #dfab21;
 }

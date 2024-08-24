@@ -55,19 +55,6 @@ nav {
     margin: 0 48px 0 0;
 }
 
-.search-nav {
-    border-radius: 8px;
-    border: solid #D1D1DB 1px;
-    background-color: #FAFAFA;
-    width: 320px;
-    padding: 8px;
-}
-
-.search-nav::placeholder {
-    font-size: 14px;
-    color: #6C6C89;
-}
-
 .active-button-nav {
     border: #EBCA6A 1px solid;
     background-color: #212121;

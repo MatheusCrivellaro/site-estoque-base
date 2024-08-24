@@ -65,32 +65,6 @@
     background-color: rgba(223, 171, 33, 0.8);
 }
 
-.button-ordenar {
-    border: 0;
-    border-radius: 8px;
-    padding: 4px 24px;
-    color: #FAFAFA;
-    font-weight: 500;
-    background-color: #282833;
-    width: 100%;
-    margin-top: 12px;
-    font-size: 14px;
-    transition: 0.2s;
-}
-
-.button-ordenar:hover {
-    background-color: #3F3F50;
-}
-
-.button-ordenar-menu {
-    width: 100%;
-    background: #282833;
-}
-
-.button-ordenar-menu a {
-    color: #FAFAFA;
-}
-
 .icon-button-filtro {
     margin-left: 4px;
 }
@@ -221,7 +195,8 @@ input::-webkit-inner-spin-button {
 
 .cards-itens-div-veiculos h3 {
     font-weight: 300;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .cards-itens-div-veiculos span {
@@ -282,37 +257,11 @@ input::-webkit-inner-spin-button {
     background-color: rgba(223, 171, 33, 0.8);
 }
 
-.button-ordenar-informations-list-veiculos {
-    height: min-content;
-    width: 100%;
-    padding: 8px 0;
-    border: none;
-    background: #282833;
-    color: #fafafa;
-    font-weight: 400;
-    font-size: 16px;
-    border-radius: 8px;
-    transition: 0.2s;
-}
-
-.button-ordenar-informations-list-veiculos:hover {
-    background: #3F3F50;
-}
-
 .div-buttons-informations-list-veiculos {
     display: flex;
     align-items: center;
     width: 30%;
     height: 100%;
-}
-
-.button-ordenar-menu-informations-list-veiculos {
-    width: max-content;
-    background: #282833;
-}
-
-.button-ordenar-menu-informations-list-veiculos a{
-    color: #fafafa;
 }
 
 .list-veiculos-container-close-filter {
@@ -326,4 +275,48 @@ input::-webkit-inner-spin-button {
     width: 100%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
+}
+
+.search-camp {
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid #474759;
+    transition: 0.2s;
+    width: 25%;
+}
+
+.search-camp input::placeholder {
+    color: #afb1c3;
+}
+
+.search-camp input {
+    border-radius: 8px 0 0 8px;
+    background-color: #282833;
+    width: 100%;
+    transition: 0.1s;
+    border: 0;
+    padding: 6px 16px;
+    color: #FAFAFA;
+    font-weight: 300;
+}
+
+.search-camp button {
+    border-radius: 0 8px 8px 0;
+    background-color: #282833;
+    padding: 4px 16px;
+    transition: 0.1s;
+    color: #fafafa;
+    font-size: 24px;
+    border-left: 1px solid #474759;
+    border-right: 0;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.search-camp button:hover {
+    background: #3f3f4a;
+}
+
+.search-camp input:focus {
+    outline: none;
 }

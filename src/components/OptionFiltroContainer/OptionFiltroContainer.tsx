@@ -36,9 +36,9 @@ const OptionFiltroContainer = ({ title, value, group, handle, todos, selected}: 
                 <div className="div-options-radios-veiculos">
                     {todos ?
                         <div>
-                            <input type="radio" name={group} id="todos" onChange={handle} value="todos"
+                            <input type="radio" name={group} id={"todos" + group} onChange={handle} value="todos"
                                    checked={selected.length === 0 || selected.includes("todos")}/>
-                            <label htmlFor="todos">Todos</label>
+                            <label htmlFor={"todos" + group}>Todos</label>
                         </div> :
                         ""
                     }
