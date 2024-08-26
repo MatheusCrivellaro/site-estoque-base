@@ -4,8 +4,14 @@ import { useQuery } from "@tanstack/react-query";
 
 const API_URL = "https://matheuscrivellaro.online"
 
+const USUARIO = "api.autodealer@startgarage.com.br";
+//user.api@carcenter.com.br
+const SENHA = "Autonitro@2023";
+const CNPJ = "24967987000186";
+//30495051000100
+
 const fetchStock = async (): AxiosPromise<Vehicle[]> => {
-    return axios.get(API_URL + '/stock/integracaoapi@autonitro.com.br/Autonitro@2023/31897305000171')
+    return axios.get(API_URL + '/stock/' + USUARIO + '/' + SENHA + '/' + CNPJ)
 }
 
 export function useGetStock() {

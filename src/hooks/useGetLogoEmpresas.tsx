@@ -11,6 +11,9 @@ import volkswagen from "../../public/logos/vw-volkswagen.png"
 import honda from "../../public/logos/honda.png"
 import jeep from "../../public/logos/jeep.png"
 import peugeot from '../../public/logos/peugeot.png'
+import kia from "../../public/logos/kia.png"
+import mitsubishi from "../../public/logos/mitsubishi.png"
+import nissan from "../../public/logos/nissan.png"
 
 const useGetLogoEmpresas = () => {
 
@@ -27,7 +30,10 @@ const useGetLogoEmpresas = () => {
         volkswagen: volkswagen,
         honda: honda,
         jeep: jeep,
-        peugeot: peugeot
+        peugeot: peugeot,
+        kia: kia,
+        mitsubishi: mitsubishi,
+        nissan: nissan
     };
 
     const getLogo = (nome: string) => {

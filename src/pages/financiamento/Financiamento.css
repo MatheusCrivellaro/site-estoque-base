@@ -1,0 +1,57 @@
+.financiamento {
+    padding: 64px 48px;
+}
+
+.financiamento-container {
+
+}
+
+.passos-financiamento-container {
+    margin-bottom: 48px;
+}
+
+.passos-financiamento {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr 2fr 3fr;
+    gap: 16px;
+    margin: 48px 0;
+}
+
+.passos-financiamento-container h1 {
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.button-container-passoas-financiameto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container-passoas-financiameto button {
+    background: #dfab21;
+    color: #fafafa;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.button-icon-passoas-financiameto {
+    margin-left: 4px;
+    font-size: 18px;
+}
+
+.container-cards-instituicoes-financiamento {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+.instituicoes-financiamento h1{
+    color: #fafafa;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}

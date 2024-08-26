@@ -149,7 +149,7 @@ const Veiculos = () => {
                             <div className="d-flex col-12">
                                 <div className="col-6 div-clear-filtro-button">
                                     <button className="clear-filtro-button" onClick={() => {handleUpdateClearFilters()}}>
-                                        Limpar Filtros
+                                        Limpar
                                     </button>
                                 </div>
                                 <div className="col-6 div-filtro-button">
