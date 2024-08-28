@@ -7,6 +7,8 @@ import CardIntituicoesParceiras from "../../components/CardIntituicoesParceiras/
 import useGetLogoEmpresas from "../../hooks/useGetLogoEmpresas.tsx";
 import FormDadosCliente from "../../components/FormDadosCliente/FormDadosCliente.tsx";
 import {usePostMail} from "../../hooks/usePostMail.tsx";
+import img_financiamento from "../../../public/image-financiamento.jpeg"
+import img_form from "../../../public/img-financiamento-formulario.png"
 
 const Financiamento = () => {
 
@@ -46,11 +48,11 @@ const Financiamento = () => {
                 <div className="passos-financiamento-container">
                     <h1>Fazer um financiamento</h1>
                     <div className="passos-financiamento">
-                        <CardPassoFinanciamento img="../../../public/image-financiamento.jpeg" title="1º passo - Pesquisa" description="Pesquisamos por taxas dos bancos com base nos seus dados pessoais, dados do veículo e valor a ser financiado."/>
+                        <CardPassoFinanciamento img={img_financiamento} title="1º passo - Pesquisa" description="Pesquisamos por taxas dos bancos com base nos seus dados pessoais, dados do veículo e valor a ser financiado."/>
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img="../../../public/image-financiamento.jpeg" title="2º passo - Aprovação" description="Você escolhe a melhor opção e passamos todos os seus dados ao banco para te aprovar."/>
+                        <CardPassoFinanciamento img={img_financiamento} title="2º passo - Aprovação" description="Você escolhe a melhor opção e passamos todos os seus dados ao banco para te aprovar."/>
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img="../../../public/image-financiamento.jpeg" title="Pronto" description="Agora é só assinar o contrato conosco e realizar o pagamento."/>
+                        <CardPassoFinanciamento img={img_financiamento} title="Pronto" description="Agora é só assinar o contrato conosco e realizar o pagamento."/>
                     </div>
                     <div className="button-container-passoas-financiameto">
                         <button>
@@ -62,11 +64,11 @@ const Financiamento = () => {
                 <div className="passos-financiamento-container">
                     <h1>Fazer um refinanciamento</h1>
                     <div className="passos-financiamento">
-                        <CardPassoFinanciamento img="../../../public/image-financiamento.jpeg" title="Dinheiro no bolso" description="Faça empréstimos, deixando seu veículo como forma de garantia."/>
+                        <CardPassoFinanciamento img={img_financiamento} title="Dinheiro no bolso" description="Faça empréstimos, deixando seu veículo como forma de garantia."/>
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img="../../../public/image-financiamento.jpeg" title="Aprovação" description="Pré-aprovação em minutos, após finalizar cadastro."/>
+                        <CardPassoFinanciamento img={img_financiamento} title="Aprovação" description="Pré-aprovação em minutos, após finalizar cadastro."/>
                         <ArrowFinanciamento />
-                        <CardPassoFinanciamento img="../../../public/image-financiamento.jpeg" title="Por que contratar?" description="Facilidade em emprestar quantias maiores com prazo maior de pagamento, além de taxas competitivas."/>
+                        <CardPassoFinanciamento img={img_financiamento} title="Por que contratar?" description="Facilidade em emprestar quantias maiores com prazo maior de pagamento, além de taxas competitivas."/>
                     </div>
                     <div className="button-container-passoas-financiameto">
                         <button>
@@ -90,7 +92,7 @@ const Financiamento = () => {
                         <FormDadosCliente submit={submitEmail} financiamento={true} />
                     </div>
                     <div className="img-financiamento-form">
-                        <img src="../../../public/img-financiamento-formulario.PNG" alt="" />
+                        <img src={img_form} alt="" />
                     </div>
                 </div>
             </div>
