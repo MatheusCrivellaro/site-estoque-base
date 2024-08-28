@@ -9,12 +9,20 @@ import FormDadosCliente from "../../components/FormDadosCliente/FormDadosCliente
 import {usePostMail} from "../../hooks/usePostMail.tsx";
 import img_financiamento from "../../../public/image-financiamento.jpeg"
 import img_form from "../../../public/img-financiamento-formulario.png"
+import {useRef} from "react";
 
 const Financiamento = () => {
 
     const { getLogoUrl } = useGetLogoEmpresas()
-
+    const formRef = useRef<HTMLDivElement>(null);
     const { mutate } = usePostMail()
+
+    const handleScrollForm = () => {
+        if (formRef.current) {
+            // Deslizando até a div
+            formRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     const textFormater = (nomeText: string, dadosText: string, telefoneText: string, wppBool: boolean, emailText: string, cpfText: string, dataText: string) => {
         return nomeText + "\n" + telefoneText + (wppBool ? " - WhatsApp" : "") + "\n" + emailText + "\n" + cpfText + "\n" + dataText + "\n" + dadosText
@@ -55,7 +63,7 @@ const Financiamento = () => {
                         <CardPassoFinanciamento img={img_financiamento} title="Pronto" description="Agora é só assinar o contrato conosco e realizar o pagamento."/>
                     </div>
                     <div className="button-container-passoas-financiameto">
-                        <button>
+                        <button onClick={handleScrollForm}>
                             Fazer um financiamento
                             <FaArrowDown className="button-icon-passoas-financiameto"/>
                         </button>
@@ -71,7 +79,7 @@ const Financiamento = () => {
                         <CardPassoFinanciamento img={img_financiamento} title="Por que contratar?" description="Facilidade em emprestar quantias maiores com prazo maior de pagamento, além de taxas competitivas."/>
                     </div>
                     <div className="button-container-passoas-financiameto">
-                        <button>
+                        <button onClick={handleScrollForm}>
                             Fazer refinanciamento
                             <FaArrowDown className="button-icon-passoas-financiameto"/>
                         </button>
@@ -85,7 +93,7 @@ const Financiamento = () => {
                         )}
                     </div>
                 </div>
-                <div className="formilario-financiamento">
+                <div className="formilario-financiamento" ref={formRef}>
                     <div>
                         <h1>Quer financiar ou refinanciar seu veículo?</h1>
                         <h2>Preencha os campos abaixo com os dados do seu veículo e com os seus dados.</h2>

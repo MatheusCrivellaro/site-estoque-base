@@ -35,11 +35,17 @@
 }
 
 .button-container-passoas-financiameto button {
+    text-decoration: none;
     background: #dfab21;
     color: #fafafa;
     border: none;
     border-radius: 8px;
     padding: 8px 12px;
+    transition: 0.2s;
+}
+
+.button-container-passoas-financiameto button:hover {
+    background: #C28800;
 }
 
 .button-icon-passoas-financiameto {
@@ -65,7 +71,7 @@
     width: 90%;
     margin-top: 48px;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 5fr 4fr;
     gap: 48px;
 }
 

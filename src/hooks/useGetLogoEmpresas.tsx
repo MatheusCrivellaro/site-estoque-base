@@ -14,6 +14,7 @@ import peugeot from '../../public/logos/peugeot.png'
 import kia from "../../public/logos/kia.png"
 import mitsubishi from "../../public/logos/mitsubishi.png"
 import nissan from "../../public/logos/nissan.png"
+import chery from "../../public/logos/chery.png"
 
 const useGetLogoEmpresas = () => {
 
@@ -33,12 +34,13 @@ const useGetLogoEmpresas = () => {
         peugeot: peugeot,
         kia: kia,
         mitsubishi: mitsubishi,
-        nissan: nissan
+        nissan: nissan,
+        chery: chery
     };
 
     const getLogo = (nome: string) => {
-        const nomeTolowerCase = nome.toLowerCase();
-        return logos[nomeTolowerCase];
+        const nomeToLowerCase = nome.toLowerCase();
+        return nomeToLowerCase in logos ? logos[nomeToLowerCase] : "https://logo.clearbit.com/" + nomeToLowerCase + ".com";
     };
 
     const getLogoUrl = (url: string) => {
