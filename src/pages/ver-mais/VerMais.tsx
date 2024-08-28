@@ -9,7 +9,7 @@ import {GoCheckCircle} from "react-icons/go";
 import {HiMiniArrowsRightLeft, HiMiniSignal} from "react-icons/hi2";
 import {LuFuel} from "react-icons/lu";
 import {PiSteeringWheel} from "react-icons/pi";
-import {GiCarDoor} from "react-icons/gi";
+import {GiAnvil, GiCarDoor} from "react-icons/gi";
 
 const VerMais = () => {
 
@@ -20,6 +20,10 @@ const VerMais = () => {
     const trataMarca = (valor: string) => {
         if (valor === "GASOLINA E ÁLCOOL")
             return "Flex"
+        if (valor === "N")
+            return "Não"
+        if (valor == "S")
+            return "Sim"
         return valor.charAt(0).toUpperCase() + valor.slice(1).toLowerCase();
     }
 
@@ -54,29 +58,31 @@ const VerMais = () => {
                             <p>{trataMarca(veiculo.cor)}</p>
                         </div>
                         <div className="item-ficha-tecnica-ver-mais">
-                            <TbEngine  className="icon-item-ficha-tecnica-ver-mais"/>
+                            <TbEngine className="icon-item-ficha-tecnica-ver-mais"/>
                             <p>{veiculo.cilindradas + " cv"}</p>
                         </div>
                         <div className="item-ficha-tecnica-ver-mais">
-                            <GiCarDoor  className="icon-item-ficha-tecnica-ver-mais"/>
+                            <GiCarDoor className="icon-item-ficha-tecnica-ver-mais"/>
                             <p>{veiculo.quantidadePortas + " portas"}</p>
                         </div>
                         <div className="item-ficha-tecnica-ver-mais">
-                            <PiSteeringWheel  className="icon-item-ficha-tecnica-ver-mais"/>
+                            <PiSteeringWheel className="icon-item-ficha-tecnica-ver-mais"/>
                             <p>{veiculo.carroceria}</p>
                         </div>
                         <div className="item-ficha-tecnica-ver-mais">
                             <LuFuel className="icon-item-ficha-tecnica-ver-mais"/>
                             <p>{trataMarca(veiculo.combustivel)}</p>
                         </div>
+                        <div className="item-ficha-tecnica-ver-mais">
+                            <GiAnvil className="icon-item-ficha-tecnica-ver-mais"/>
+                            <p>{"Blindagem: " + trataMarca(veiculo.blindado)}</p>
+                        </div>
                     </div>
                 </div>
-                <div className="garantia-ver-mais">
-                    <h1>Garantia</h1>
-                    <div className="conteudo-garantia-ver-mais">
-                        <p>Garantia da Loja (3 meses)</p>
-                    </div>
-                </div>
+            </div>
+            <div className="garantia-ver-mais">
+                <h1>Garantia</h1>
+                <p>Garantia da Loja (3 meses)</p>
             </div>
             <div className="opcionais-ver-mais">
                 <h1>Opcionais</h1>
