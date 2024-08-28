@@ -11,7 +11,7 @@ const CNPJ = "24967987000186";
 //30495051000100
 
 const fetchStock = async (): AxiosPromise<Vehicle[]> => {
-    return axios.get(API_URL + '/stock/' + USUARIO + '/' + SENHA + '/' + CNPJ)
+    return axios.get(API_URL + '/estoque/' + USUARIO + '/' + SENHA + '/' + CNPJ)
 }
 
 export function useGetStock() {

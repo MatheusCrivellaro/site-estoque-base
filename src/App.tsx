@@ -8,6 +8,7 @@ import Veiculos from './pages/veiculos/Veiculos'
 import Venda from './pages/venda/Venda'
 import Footer from "./components/Footer/Footer.tsx";
 import {useEffect, useState} from "react";
+import FormConcluido from "./pages/form-concluido/FormConcluido.tsx";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
                     <Route path="/sobre-nos" element={<Sobre />} />
                     <Route path="/venda-seu-veiculo" element={<Venda />} />
                     <Route path="/financiamento" element={<Financiamento />} />
+                    <Route path="form-concluido" element={<FormConcluido />} />
                 </Routes>
             </div>
             <Footer />

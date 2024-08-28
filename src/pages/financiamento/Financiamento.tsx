@@ -10,12 +10,14 @@ import {usePostMail} from "../../hooks/usePostMail.tsx";
 import img_financiamento from "../../../public/image-financiamento.jpeg"
 import img_form from "../../../public/img-financiamento-formulario.png"
 import {useRef} from "react";
+import {useNavigate} from "react-router-dom";
 
 const Financiamento = () => {
 
     const { getLogoUrl } = useGetLogoEmpresas()
     const formRef = useRef<HTMLDivElement>(null);
     const { mutate } = usePostMail()
+    const navigate = useNavigate();
 
     // const { validDate, validCPF, validEmail, validPhone } = useValid()
 
@@ -36,6 +38,7 @@ const Financiamento = () => {
         let text = textFormater(list[0], list[1], list[2], list[3], list[4], list[5], list[6]);
         console.log(list);
         mutate({to, subject, text})
+        navigate("/form-concluido")
     }
 
     const listInstitucion = [
