@@ -4,9 +4,12 @@ import {Vehicle} from "../../interfaces/Vehicle.ts";
 import useGetLogoEmpresas from "../../hooks/useGetLogoEmpresas.tsx";
 import {SlSpeedometer} from "react-icons/sl";
 import {MdOutlineCalendarMonth, MdOutlineColorLens, MdOutlineFactCheck} from "react-icons/md";
-import {TbManualGearbox} from "react-icons/tb";
+import {TbEngine, TbManualGearbox} from "react-icons/tb";
 import {GoCheckCircle} from "react-icons/go";
 import {HiMiniArrowsRightLeft, HiMiniSignal} from "react-icons/hi2";
+import {LuFuel} from "react-icons/lu";
+import {PiSteeringWheel} from "react-icons/pi";
+import {GiCarDoor} from "react-icons/gi";
 
 const VerMais = () => {
 
@@ -15,6 +18,8 @@ const VerMais = () => {
     const { getLogo } = useGetLogoEmpresas()
 
     const trataMarca = (valor: string) => {
+        if (valor === "GASOLINA E ÁLCOOL")
+            return "Flex"
         return valor.charAt(0).toUpperCase() + valor.slice(1).toLowerCase();
     }
 
@@ -47,6 +52,22 @@ const VerMais = () => {
                         <div className="item-ficha-tecnica-ver-mais">
                             <MdOutlineColorLens className="icon-item-ficha-tecnica-ver-mais"/>
                             <p>{trataMarca(veiculo.cor)}</p>
+                        </div>
+                        <div className="item-ficha-tecnica-ver-mais">
+                            <TbEngine  className="icon-item-ficha-tecnica-ver-mais"/>
+                            <p>{veiculo.cilindradas + " cv"}</p>
+                        </div>
+                        <div className="item-ficha-tecnica-ver-mais">
+                            <GiCarDoor  className="icon-item-ficha-tecnica-ver-mais"/>
+                            <p>{veiculo.quantidadePortas + " portas"}</p>
+                        </div>
+                        <div className="item-ficha-tecnica-ver-mais">
+                            <PiSteeringWheel  className="icon-item-ficha-tecnica-ver-mais"/>
+                            <p>{veiculo.carroceria}</p>
+                        </div>
+                        <div className="item-ficha-tecnica-ver-mais">
+                            <LuFuel className="icon-item-ficha-tecnica-ver-mais"/>
+                            <p>{trataMarca(veiculo.combustivel)}</p>
                         </div>
                     </div>
                 </div>
@@ -84,8 +105,7 @@ const VerMais = () => {
             </div>
             <div className="mais-informacoes-ver-mais">
                 <h1>Informações</h1>
-                <p>
-                    A procura de um Hyundai HB20 Comf./C.Plus/C.Style 1.0 Flex 12V - Prata - 2013 seminovo? Aqui tem. 3 Meses de garantia. Ano: 2012/2013 Potência: 75 cv. Câmbio: Manual Consumo: Urbano: 11.0 Km/l - Rodovia: 14.0 Km/l. Gostou deste carro? Temos uma equipe de atendimento on-line pronta para te atender. Tire todas suas dúvidas de forma rápida e descomplicada, através do nosso WhatsApp (11)93452-4004, ou se preferir, faça uma visita. Nosso endereço é Avenida dos Autonomistas, nº 3423, Centro, Osasco - São Paulo . Te esperamos!                </p>
+                <p>{veiculo.observacao}</p>
             </div>
         </div>
     )

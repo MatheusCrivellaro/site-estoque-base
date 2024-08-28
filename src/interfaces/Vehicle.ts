@@ -30,4 +30,16 @@ export interface Vehicle {
     blindado: string;
     destaque: string;
     observacao: string;
+    cilindradas: string,
+    cnpj: string,
+    hashPaidTraffic: string,
+    quantidadePortas: string,
+    chassi: string,
+    renavan: string,
+    precoOriginalVenda: string,
+    urlReservaMercadoLivre: string,
+    youtubeVideo: string,
+    dataCriacao: string,
+    dataAlteracao: string,
+    estilo: string
 }

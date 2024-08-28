@@ -78,6 +78,7 @@
 }
 
 .button-card-veiculos-estoque {
+    border: none;
     width: 100%;
     text-align: center;
     padding: 4px;
