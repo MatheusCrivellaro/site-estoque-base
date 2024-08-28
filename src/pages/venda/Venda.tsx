@@ -17,7 +17,7 @@ const Venda = () => {
     }
 
     const submitEmail = (list: [...any]) => {
-        let to = "matheuscriv@gmail.com";
+        let to = "ric-cc@hotmail.com";
         let subject = "Venda de veiculo, " + list[0]
         let text = textFormater(list[0], list[1], list[2], list[3], list[4]);
         mutate({to, subject, text})
