@@ -12,7 +12,7 @@
 
 .passos-financiamento-container {
     margin-bottom: 48px;
-    width: 70%;
+    width: 80%;
 }
 
 .passos-financiamento {
@@ -54,13 +54,21 @@
 }
 
 .container-cards-instituicoes-financiamento {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 32px;
 }
 
+.instituicoes-financiamento {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .instituicoes-financiamento h1{
+    width: 100%;
+    text-align: start;
     color: #fafafa;
     font-size: 24px;
     font-weight: 700;
@@ -71,7 +79,7 @@
     width: 90%;
     margin-top: 48px;
     display: grid;
-    grid-template-columns: 5fr 4fr;
+    grid-template-columns: 1fr 1fr;
     gap: 48px;
 }
 
@@ -183,7 +191,13 @@
     margin-left: 8px;
 }
 
+.img-financiamento-form {
+    display: flex;
+    align-items: center;
+}
+
 .img-financiamento-form img{
     width: 100%;
+    height: min-content;
     border-radius: 16px;
 }
