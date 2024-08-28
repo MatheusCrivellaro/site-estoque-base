@@ -22,10 +22,8 @@ const Financiamento = () => {
     // const { validDate, validCPF, validEmail, validPhone } = useValid()
 
     const handleScrollForm = () => {
-        if (formRef.current) {
-            // Deslizando até a div
+        if (formRef.current)
             formRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
     };
 
     const textFormater = (nomeText: string, dadosText: string, telefoneText: string, wppBool: boolean, emailText: string, cpfText: string, dataText: string) => {
@@ -36,7 +34,6 @@ const Financiamento = () => {
         let to = "matheuscriv@gmail.com";
         let subject = "Venda de veiculo, " + list[0]
         let text = textFormater(list[0], list[1], list[2], list[3], list[4], list[5], list[6]);
-        console.log(list);
         mutate({to, subject, text})
         navigate("/form-concluido")
     }

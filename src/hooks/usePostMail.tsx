@@ -5,7 +5,6 @@ import {useMutation} from "@tanstack/react-query";
 const URL_API = "https://matheuscrivellaro.online/mail"
 
 const postMail = async (email: EmailBody) => {
-    alert("Tentando enviar")
     return await axios.post(URL_API, email)
 }
 

@@ -5,10 +5,12 @@ import FormDadosCliente from "../../components/FormDadosCliente/FormDadosCliente
 import cumprimento from "../../../public/cumprimento.jpeg"
 import analise_carro from "../../../public/analise-carro.jpeg"
 import conversa from "../../../public/conversa.jpeg"
+import {useNavigate} from "react-router-dom";
 
 const Venda = () => {
 
     const { mutate } = usePostMail()
+    const navigate = useNavigate();
 
     const textFormater = (nomeText: string, dadosText: string, telefoneText: string, wppBool: boolean, emailText: string) => {
         return nomeText + "\n" + telefoneText + (wppBool ? " - WhatsApp" : "") + "\n" + emailText + "\n" + dadosText
@@ -18,8 +20,8 @@ const Venda = () => {
         let to = "matheuscriv@gmail.com";
         let subject = "Venda de veiculo, " + list[0]
         let text = textFormater(list[0], list[1], list[2], list[3], list[4]);
-        console.log(list);
         mutate({to, subject, text})
+        navigate("/form-concluido")
     }
 
     return (
