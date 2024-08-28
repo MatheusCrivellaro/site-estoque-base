@@ -17,6 +17,8 @@ const Financiamento = () => {
     const formRef = useRef<HTMLDivElement>(null);
     const { mutate } = usePostMail()
 
+    // const { validDate, validCPF, validEmail, validPhone } = useValid()
+
     const handleScrollForm = () => {
         if (formRef.current) {
             // Deslizando até a div
@@ -25,7 +27,7 @@ const Financiamento = () => {
     };
 
     const textFormater = (nomeText: string, dadosText: string, telefoneText: string, wppBool: boolean, emailText: string, cpfText: string, dataText: string) => {
-        return nomeText + "\n" + telefoneText + (wppBool ? " - WhatsApp" : "") + "\n" + emailText + "\n" + cpfText + "\n" + dataText + "\n" + dadosText
+        return nomeText + "\n" + telefoneText + (wppBool ? " - WhatsApp" : "") + "\n" + emailText + (cpfText !== undefined && cpfText ? "\n" + cpfText : "") + (dataText !== undefined && dataText ? "\n" + dataText : "") + "\n" + dadosText
     }
 
     const submitEmail = (list: [...any]) => {
@@ -88,8 +90,8 @@ const Financiamento = () => {
                 <div className="instituicoes-financiamento">
                     <h1>Instituições parceiras</h1>
                     <div className="container-cards-instituicoes-financiamento">
-                        {listInstitucion.map(value =>
-                            <CardIntituicoesParceiras img={getLogoUrl(value.url)} titulo={value.name} />
+                        {listInstitucion.map((value, index) =>
+                            <CardIntituicoesParceiras img={getLogoUrl(value.url)} titulo={value.name} key={index}/>
                         )}
                     </div>
                 </div>

@@ -135,7 +135,7 @@ const FormDadosCliente = ({ submit, financiamento }: props) => {
             }
             <div className="content-button-submit-form-venda">
                 <button className="button-submit-form-venda"
-                        onClick={() => financiamento ? submit([nome, dados, telefone, wpp, email]) : submit([nome, dados, telefone, wpp, email, cpf, data])}>Enviar para análise <GoArrowRight
+                        onClick={() => financiamento ? submit([nome, dados, telefone, wpp, email, cpf, data]) : submit([nome, dados, telefone, wpp, email])}>Enviar para análise <GoArrowRight
                     className="icon-button-submit-form-venda"/></button>
             </div>
         </div>
