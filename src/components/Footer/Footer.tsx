@@ -3,6 +3,7 @@ import {GrLocation} from "react-icons/gr";
 import {FaWhatsapp} from "react-icons/fa";
 import {RiPhoneLine} from "react-icons/ri";
 import {MdOutlineEmail} from "react-icons/md";
+import logo_autodealer from "../../../public/logo-autodealer.png"
 
 const Footer = () => {
     return (
@@ -37,27 +38,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            {/*<footer>*/}
-            {/*    <div className="">*/}
-            {/*        <img src="https://static.autoconf.com.br/site-car-center-912/build/logo.png" alt=""/>*/}
-            {/*    </div>*/}
-            {/*    <div className="footer-options-div col-4">*/}
-            {/*        <h2>Navegação</h2>*/}
-            {/*        <Link to="/" className="footer-option">Início</Link>*/}
-            {/*        <Link to="/veiculos" className="footer-option">Veículos</Link>*/}
-            {/*        <Link to="/sobre-nos" className="footer-option">Sobre nós</Link>*/}
-            {/*        <Link to="/venda-seu-veiculo" className="footer-option">Venda seu veículo</Link>*/}
-            {/*        <Link to="/financiamento" className="footer-option">Financiamento</Link>*/}
-            {/*    </div>*/}
-            {/*    <div className="text-end">*/}
-            {/*        <h3>Redes Sociais</h3>*/}
-            {/*        <FaFacebookF className="icon-redes-footer"/>*/}
-            {/*        <FaInstagram className="icon-redes-footer"/>*/}
-            {/*        <FaXTwitter className="icon-redes-footer"/>*/}
-            {/*    </div>*/}
-            {/*</footer>*/}
             <div className="direitos-autorais-footer">
                 <h3>Desenvolvido por AutoDealer Sistemas</h3>
+                <img src={logo_autodealer} alt=""/>
             </div>
         </div>
     )
