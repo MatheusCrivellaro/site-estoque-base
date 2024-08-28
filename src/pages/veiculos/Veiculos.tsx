@@ -12,6 +12,7 @@ import {useLocation} from "react-router-dom";
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
 import ButtonFilterOrdenation from "../../components/ButtonFilterOrdenation/ButtonFilterOrdenation.tsx";
 import {CgSearch} from "react-icons/cg";
+import SpinnerLoading from "../../components/SpinnerLoading/SpinnerLoading.tsx";
 
 
 const Veiculos = () => {
@@ -197,11 +198,8 @@ const Veiculos = () => {
                 <div className={`cards-div-veiculos ${isOpenFilter ? "is-open-div-cards" : "is-close-div-cards"}`}>
                     {filteredVehicles.length === 0 ?
                         (isLoading ?
-                            <div className="spinner-estoque-carros-div">
-                                <div className="spinner-border spinner-estoque-carros" role="status">
-                                    <span className="visually-hidden">Loading...</span>
-                                </div>
-                            </div> :
+                            <SpinnerLoading />
+                             :
                             <div className="cards-itens-div-none-veiculos">
                                 <div className="div-container-carousel-categorias">
                                     <CarouselCategorias handleSelectedMarca={handleSelectMarcaCarousel} marcas={marcas}/>
