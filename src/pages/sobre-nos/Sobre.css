@@ -46,9 +46,13 @@
     border: none;
     border-radius: 8px;
     background-color: #26A95F;
-    color: #fafafa;
     padding: 8px 12px;
     margin: 12px 0;
+}
+
+.wpp-button-atendimento a{
+    color: #fafafa;
+    text-decoration: none;
 }
 
 .icon-wpp-button-atendimento {

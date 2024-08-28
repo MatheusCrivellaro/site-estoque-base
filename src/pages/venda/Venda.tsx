@@ -1,12 +1,24 @@
 import './Venda.css';
 import ButtonSuspense from "../../components/ButtonSuspense/ButtonSuspense.tsx";
-import {IoDocumentTextOutline} from "react-icons/io5";
-import {TbFaceId} from "react-icons/tb";
-import {FaPhone} from "react-icons/fa6";
-import {LuMail} from "react-icons/lu";
-import {GoArrowRight} from "react-icons/go";
+import {usePostMail} from "../../hooks/usePostMail.tsx";
+import FormDadosCliente from "../../components/FormDadosCliente/FormDadosCliente.tsx";
 
 const Venda = () => {
+
+    const { mutate } = usePostMail()
+
+    const textFormater = (nomeText: string, dadosText: string, telefoneText: string, wppBool: boolean, emailText: string) => {
+        return nomeText + "\n" + telefoneText + (wppBool ? " - WhatsApp" : "") + "\n" + emailText + "\n" + dadosText
+    }
+
+    const submitEmail = (list: [...any]) => {
+        let to = "matheuscriv@gmail.com";
+        let subject = "Venda de veiculo, " + list[0]
+        let text = textFormater(list[0], list[1], list[2], list[3], list[4]);
+        console.log(list);
+        mutate({to, subject, text})
+    }
+
     return (
         <div className="venda">
             <ButtonSuspense />
@@ -16,45 +28,7 @@ const Venda = () => {
                         <h1>Quer vender seu veículo?</h1>
                         <h2>Preencha os campos abaixo com os dados do seu veículo e com os seus dados.</h2>
                     </div>
-                    <div className="venda-form-input-div">
-                        <div className="input-venda-dados">
-                            <h3>Dados do seu veículo</h3>
-                            <div className="content-input-venda">
-                                <IoDocumentTextOutline className="icon-input-venda"/>
-                                <input type="text" placeholder="Digite aqui..." className="input-venda-form-item"/>
-                            </div>
-                            <p>Descreva o seu veículo. </p>
-                            <p>Exemplo: Toyota Corola 2017...</p>
-                        </div>
-                        <div className="input-venda-nome">
-                            <h3>Seu nome</h3>
-                            <div className="content-input-venda">
-                                <TbFaceId className="icon-input-venda"/>
-                                <input type="text" placeholder="Digite aqui..." className="input-venda-form-item"/>
-                            </div>
-                        </div>
-                        <div className="input-venda-phone">
-                            <h3>Seu telefone</h3>
-                            <div className="content-input-venda">
-                                <FaPhone className="icon-input-venda"/>
-                                <input type="text" placeholder="Digite aqui..." className="input-venda-form-item"/>                            </div>
-                            <div className="check-input-phone-div">
-                                <input type="checkbox"/>
-                                <p>Este telefone é WhatsApp</p>
-                            </div>
-                        </div>
-                        <div className="input-venda-email">
-                            <h3>Seu e-mail</h3>
-                            <div className="content-input-venda">
-                                <LuMail className="icon-input-venda"/>
-                                <input type="text" placeholder="Digite aqui..." className="input-venda-form-item"/>
-                            </div>
-                        </div>
-                        <div className="content-button-submit-form-venda">
-                            <button className="button-submit-form-venda">Enviar para análise <GoArrowRight
-                                className="icon-button-submit-form-venda"/></button>
-                        </div>
-                    </div>
+                    <FormDadosCliente submit={submitEmail} financiamento={false}/>
                 </div>
                 <div className="venda-como-funciona">
                     <h1 className="venda-como-funciona-title">Como funciona</h1>

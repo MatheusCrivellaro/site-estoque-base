@@ -34,7 +34,8 @@ const Sobre = () => {
                         Entre em contato pelo Whatsapp da Car Center Osasco Eireli
                     </h2>
                     <button className="wpp-button-atendimento">
-                        <FaWhatsapp className="icon-wpp-button-atendimento"/>(11) 93452-4004</button>
+                        <a href="https://api.whatsapp.com/send/?phone=5511934524004&text&type=phone_number&app_absent=0"><FaWhatsapp className="icon-wpp-button-atendimento"/>(11) 93452-4004</a>
+                    </button>
                     <h2>
                         Ou ligue agora para:
                     </h2>

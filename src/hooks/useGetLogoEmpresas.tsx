@@ -41,8 +41,13 @@ const useGetLogoEmpresas = () => {
         return logos[nomeTolowerCase];
     };
 
+    const getLogoUrl = (url: string) => {
+        return "https://logo.clearbit.com/" + url
+    }
+
     return {
-        getLogo
+        getLogo,
+        getLogoUrl,
     }
 }
 
