@@ -1,6 +1,6 @@
 import './CardVeiculoEstoque.css'
 
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Vehicle} from "../../interfaces/Vehicle.ts";
 import {MdOutlineCalendarMonth} from "react-icons/md";
 import {SlSpeedometer} from "react-icons/sl";
@@ -15,6 +15,11 @@ type props = {
 const CardVeiculoEstoque = ({ veiculo }:props) => {
 
     const { getLogo } = useGetLogoEmpresas()
+    const navigate = useNavigate();
+
+    const handleVerMais = () => {
+        navigate('/ver-mais', {state: {veiculo}})
+    }
 
     return (
         <div className="card-veiculo-div-estoque">
@@ -31,7 +36,7 @@ const CardVeiculoEstoque = ({ veiculo }:props) => {
                     </div>
                     <h3><span>R$ {veiculo.precoVenda}</span></h3>
                     <div className="d-flex">
-                        <Link to="/" className="button-card-veiculos-estoque">Ver mais</Link>
+                        <button onClick={handleVerMais} className="button-card-veiculos-estoque">Ver mais</button>
                     </div>
                 </div>
             </div>

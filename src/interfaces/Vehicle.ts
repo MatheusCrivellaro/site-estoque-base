@@ -29,4 +29,5 @@ export interface Vehicle {
     tipoVeiculo: string;
     blindado: string;
     destaque: string;
+    observacao: string;
 }
