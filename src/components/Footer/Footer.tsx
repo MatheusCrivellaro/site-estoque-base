@@ -39,7 +39,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="direitos-autorais-footer">
-                <h3>Desenvolvido por AutoDealer Sistemas</h3>
+                <h3>Powered by</h3>
                 <img src={logo_autodealer} alt=""/>
             </div>
         </div>

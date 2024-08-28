@@ -50,8 +50,7 @@ footer img {
 .localizacao-div-inicio {
     padding: 24px 48px 64px 48px;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr;
     background: #121217;
 }
 
@@ -123,10 +122,12 @@ footer img {
 }
 
 .direitos-autorais-footer h3 {
+    font-size: 14px;
+    font-weight: 400;
     margin: 0;
 }
 
 .direitos-autorais-footer img {
-    height: 24px;
+    height: 20px;
     margin-left: 8px;
 }
