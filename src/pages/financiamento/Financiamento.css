@@ -54,9 +54,17 @@
 }
 
 .container-cards-instituicoes-financiamento {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 32px;
+}
+
+@media (min-width: 1600px) {
+    .container-cards-instituicoes-financiamento {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 32px;
+    }
 }
 
 .instituicoes-financiamento {

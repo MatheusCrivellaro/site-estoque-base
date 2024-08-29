@@ -10,6 +10,7 @@ import {HiMiniArrowsRightLeft, HiMiniSignal} from "react-icons/hi2";
 import {LuFuel} from "react-icons/lu";
 import {PiSteeringWheel} from "react-icons/pi";
 import {GiAnvil, GiCarDoor} from "react-icons/gi";
+import CarouselVerMais from "../../components/CarouselVerMais/CarouselVerMais.tsx";
 
 const VerMais = () => {
 
@@ -29,6 +30,7 @@ const VerMais = () => {
 
     return (
         <div className="ver-mais">
+            <CarouselVerMais images={veiculo.fotos.foto.map(value => value.uri)}/>
             <div className="ver-mais-title">
                 <img src={getLogo(veiculo.marca)} alt="" />
                 <div>

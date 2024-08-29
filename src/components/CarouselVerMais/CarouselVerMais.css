@@ -1,0 +1,23 @@
+.carousel-ver-mais {
+    cursor: grab;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.inner-carousel-ver-mais {
+    display: flex;
+}
+
+.item-carousel-ver-mais {
+    max-height: 400px;
+    min-width: 500px;
+    padding: 0 12px;
+}
+
+.item-carousel-ver-mais img {
+    pointer-events: none;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
