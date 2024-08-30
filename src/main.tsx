@@ -13,6 +13,8 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 const client = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

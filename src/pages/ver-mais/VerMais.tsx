@@ -30,7 +30,7 @@ const VerMais = () => {
 
     return (
         <div className="ver-mais">
-            <CarouselVerMais images={veiculo.fotos.foto.map(value => value.uri)}/>
+            <CarouselVerMais images={veiculo.fotos.foto}/>
             <div className="ver-mais-title">
                 <img src={getLogo(veiculo.marca)} alt="" />
                 <div>
