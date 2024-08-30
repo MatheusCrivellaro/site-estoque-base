@@ -1,35 +1,57 @@
 import './CarouselVerMais.css'
-import { motion } from "framer-motion";
+import {Swiper, SwiperSlide} from "swiper/react";
 import {useEffect, useRef, useState} from "react";
-
+import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from "react-icons/md";
+import CustomPaginationVerMais from "../CustomPaginationVerMais/CustomPaginationVerMais.tsx";
 type props = {
     images: string[]
 }
 
 const CarouselVerMais = ({ images }:props) => {
 
-    const carouselRef = useRef<HTMLDivElement>(null);
-    const [width, setWidth] = useState(0);
+    const [sliderPerView, setSliderPerView] = useState(3);
+    const swiperRef = useRef<any>(null);
+    // const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
     useEffect(() => {
-        setWidth(carouselRef.current?.scrollWidth! - carouselRef.current?.offsetWidth!);
+        // swiperRef.current && setSwiperInstance(swiperRef.current);
+        const handleResize = () => {
+            setSliderPerView(() => window.innerWidth < 720 ? 1 : 3)
+        }
+        handleResize()
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+
     }, []);
 
     return (
-
-        <motion.div ref={carouselRef} className="carousel-ver-mais" whileTap={{ cursor: "grabbing" }}>
-            <motion.div className="inner-carousel-ver-mais" drag="x" dragConstraints={{ right: 0, left: -width }} initial={{ x: 200 }} animate={{ x: 0 }} transition={{ duration: 0.2 }}>
-
-                {images.map(image => (
-                    <motion.div className="item-carousel-ver-mais" key={image}>
-                        <img src={image} alt=""/>
-                    </motion.div>
+        <div className="carousel-ver-mais">
+            <button onClick={() => swiperRef.current.slidePrev()} className="button-prev-carousel-ver-mais button-arrow-carousel-ver-mais"><MdOutlineArrowBackIos /></button>
+            <Swiper
+                slidesPerView={sliderPerView}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                loop={true}
+                pagination={{clickable: true}}
+            >
+                {images.map((image, index) => (
+                    <SwiperSlide key={index} className="item-carousel-ver-mais">
+                        <button>
+                            <img src={image} alt=""/>
+                        </button>
+                    </SwiperSlide>
                 ))}
-
-            </motion.div>
-        </motion.div>
-
-    )
+            </Swiper>
+            <button onClick={() => swiperRef.current.slideNext()} className="button-next-carousel-ver-mais button-arrow-carousel-ver-mais"><MdOutlineArrowForwardIos /></button>
+            {/*<CustomPaginationVerMais swiper={swiperInstance} />*/}
+        </div>
+    );
 }
 
 export default CarouselVerMais
