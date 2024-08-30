@@ -2,7 +2,7 @@ import './CarouselVerMais.css'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useEffect, useRef, useState} from "react";
 import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from "react-icons/md";
-import {Carousel, Fancybox, Images, Panzoom} from "@fancyapps/ui";
+// import {Fancybox} from "@fancyapps/ui";
 import {Foto} from "../../interfaces/Foto.ts";
 type props = {
     images: Foto[]
@@ -14,26 +14,26 @@ const CarouselVerMais = ({ images }:props) => {
     const swiperRef = useRef<any>(null);
     // const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        Carousel: {
-            infinite: true,
-        },
-        Toolbar: {
-            display: {
-                left: ["infobar"],
-                middle: [
-                    "zoomIn",
-                    "zoomOut",
-                    "toggle1to1",
-                    "rotateCCW",
-                    "rotateCW",
-                    "flipX",
-                    "flipY",
-                ],
-                right: ["slideshow", "thumbs", "close"],
-            },
-        },
-    });
+    // Fancybox.bind('[data-fancybox="gallery"]', {
+    //     Carousel: {
+    //         infinite: true,
+    //     },
+    //     Toolbar: {
+    //         display: {
+    //             left: ["infobar"],
+    //             middle: [
+    //                 "zoomIn",
+    //                 "zoomOut",
+    //                 "toggle1to1",
+    //                 "rotateCCW",
+    //                 "rotateCW",
+    //                 "flipX",
+    //                 "flipY",
+    //             ],
+    //             right: ["slideshow", "thumbs", "close"],
+    //         },
+    //     },
+    // });
 
     useEffect(() => {
         // swiperRef.current && setSwiperInstance(swiperRef.current);
@@ -64,7 +64,7 @@ const CarouselVerMais = ({ images }:props) => {
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index} className="item-carousel-ver-mais">
-                        <a href={image.uri} data-fancybox="gallery">
+                        <a href={image.uri} > {/* data-fancybox="gallery"*/}
                             <img src={image.uri} alt=""/>
                         </a>
                     </SwiperSlide>
